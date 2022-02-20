@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>PICK UP 300X</name>
+        <specs>
+            <workingWidth>3.0</workingWidth>
+            <combination xmlFilename="$data/vehicles/claas/jaguar960TT/jaguar960TT.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutterForage</function>
+        </functions>
+        <image>$data/vehicles/claas/pickUp300/store_pickUp300.png</image>
+        <price>50000</price>
+        <lifetime>1200</lifetime>
+        <rotation>0</rotation>
+        <brand>CLAAS</brand>
+        <category>forageHarvesterCutters</category>
+        <shopFoldingState>1</shopFoldingState>
+        <shopTranslationOffset>0 -0.063 0</shopTranslationOffset>
+        <shopRotationOffset>-2.654 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>1616428</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>293112</indexBufferMemoryUsage>
+        <textureMemoryUsage>873856</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_pickup</typeDesc>
+        <filename>$data/vehicles/claas/pickUp300/pickUp300.i3d</filename>
+        <size width="4" length="2.5" lengthOffset="0.2" />
+        <speedLimit value="25" />
+        <components>
+            <component centerOfMass="0 0.5 -0.2" solverIterationCount="10" mass="1370" />
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="COMBINE_HEADER" />
+    </base>
+
+    <powerConsumer ptoRpm="540" neededMinPtoPower="50" neededMaxPtoPower="100">
+    </powerConsumer>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+                <wheels hasSurfaceSounds="false">
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/18x8_50R8.xml" isLeft="false" >
+                        <physics restLoad="0.5" repr="wheelLeft"   forcePointRatio="0.15" initialCompression="40" suspTravel="0.05" spring="25" damper="10" frictionScale="0.5" rotationDamping="0.002" brakeFactor="0"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/18x8_50R8.xml" isLeft="true" >
+                        <physics restLoad="0.5" repr="wheelRight"  forcePointRatio="0.15" initialCompression="40" suspTravel="0.05" spring="25" damper="10" frictionScale="0.5" rotationDamping="0.002" brakeFactor="0"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/T510/2_50R3.xml" isLeft="true" >
+                        <physics restLoad="0.1" repr="wheelMiddle" forcePointRatio="0.05" initialCompression="1"  suspTravel="0.01" spring="20" damper="10" frictionScale="0.5" rotationDamping="0.002" brakeFactor="0"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <rimColor>CLAAS_RED1</rimColor>
+
+        <hubs>
+            <color0>CLAAS_RED1</color0>
+            <hub linkNode="wheelLeft"  filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="false" scale="0.151 0.151 0.151" />
+            <hub linkNode="wheelRight" filename="$data/shared/wheels/hubs/hubSmall_n0_1.xml" isLeft="true"  scale="0.151 0.151 0.151" />
+        </hubs>
+    </wheels>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="smallDrum01" radius="0.3" groundReferenceNodeIndex="1" fadeOutTime="5" onlyActiveWhenLowered="true" workAreaIndex="1"/>
+        <speedRotatingPart node="smallDrum02" radius="0.3" groundReferenceNodeIndex="1" fadeOutTime="6" onlyActiveWhenLowered="true" workAreaIndex="1"/>
+    </speedRotatingParts>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="depthNode" threshold="0.3" />
+    </groundReferenceNodes>
+
+    <workAreas>
+        <workArea type="cutter" functionName="processPickupCutterArea" disableBackwards="false" >
+            <area startNode="areaStart" widthNode="areaWidth" heightNode="areaHeight" />
+            <groundReferenceNode index="1" />
+            <folding minLimit="0" maxLimit="0.5" />
+        </workArea>
+    </workAreas>
+
+    <attachable>
+        <brakeForce force="0.2"/>
+
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="cutterHarvester" upperRotationOffset="-5" >
+                <heightNode node="depthNode" />
+                <distanceToGround lower="0.1" upper="1.0" />
+            </inputAttacherJoint>
+        </inputAttacherJoints>
+        <support animationName="moveSupport" />
+        <lowerAnimation name="lowerAnimation" />
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn01"  length="0.8" diameter="0.01" straighteningFactor="2">
+            <objectChange node="hydraulicIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut01" length="0.8" diameter="0.01" straighteningFactor="2">
+            <objectChange node="hydraulicOut01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric"  node="electricCable"  length="0.8" diameter="0.008" straighteningFactor="2">
+            <objectChange node="electricIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+    </connectionHoses>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn01_connector"  filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicOut01_connector" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|1" linkNode="electricIn01_connector"   filename="$data/shared/connectionHoses/connectors.i3d"/>
+    </dynamicallyLoadedParts>
+
+    <dynamicMount forceLimitScale="1" />
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts startMoveDirection="1" turnOnFoldMaxLimit="0.5" turnOnFoldMinLimit="0" >
+                    <foldingPart animationName="folding" speedScale="1.2" />
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+        <animation name="folding">
+            <part node="smallDrumArm"    startTime="0" endTime="1.5" startRot="75 0 0" endRot="40 0 0"/>
+            <part node="wheelArmLeft01"  startTime="1.5" endTime="3.5" startRot="0 0 0" endRot="-106 0 0"/>
+            <part node="wheelArmLeft02"  startTime="1.5" endTime="3.5" startRot="0 0 0" endRot="102 0 0"/>
+            <part node="wheelArmRight01" startTime="1.5" endTime="3.5" startRot="0 0 0" endRot="106 0 0"/>
+            <part node="wheelArmRight02" startTime="1.5" endTime="3.5" startRot="0 0 0" endRot="-102 0 0"/>
+
+            <sound template="defaultHydraulicSound"  startTime="1.49"  endTime="3.49"  direction="0"     pitchScale="1.2" volumeScale="2.5" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicLayerTone3"    startTime="0.01"  endTime="1.49"  direction="0"     pitchScale="1.0" volumeScale="0.8" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="metalClose"             startTime="3.49"  direction="1"   volumeScale="0.7" pitchScale="2.8"/>
+            <sound template="latchSmall"             startTime="3.49"  direction="1"   volumeScale="0.4" pitchScale="0.8"/>
+            <sound template="metalClose"             startTime="1.51"  direction="-1"  volumeScale="0.7" pitchScale="2.8"/>
+            <sound template="latchSmall"             startTime="1.51"  direction="-1"  volumeScale="0.4" pitchScale="0.8"/>
+            <sound template="latchSmall"             startTime="0.01"  volumeScale="0.2" pitchScale="1.0" direction="-1" />
+            <sound template="clackVar4"              startTime="0.01"  volumeScale="1.5" pitchScale="1.3" direction="-1" />
+            <sound template="latchSmall"             startTime="1.49"  volumeScale="0.2" pitchScale="1.0" direction="1" />
+            <sound template="clackVar4"              startTime="1.49"  volumeScale="1.5" pitchScale="1.3" direction="1" />
+        </animation>
+
+        <animation name="lowerAnimation">
+            <part node="hoseArm" startTime="0" endTime="2" startRot="25 0 0" endRot="0 0 0"/>
+        </animation>
+
+        <animation name="moveSupport">
+            <part node="lockArm01" startTime="0" endTime="0.5" startRot="0 0 -25" endRot="0 0 0" />
+            <part node="lockArm03" startTime="0" endTime="0.5" startRot="56 0 0" endRot="0 0 0" />
+            <part node="supportArmLeft" startTime="0" endTime="0.1" startTrans="0 0 0" endTrans="0 -0.225 0" />
+            <part node="supportArmRightAttached" startTime="0" endTime="0.1" visibility="true" />
+            <part node="supportArmRightAttached" startTime="0.2" endTime="0.1" visibility="false" />
+            <part node="supportArmRightDetached" startTime="0" endTime="0.1" visibility="false" />
+            <part node="supportArmRightDetached" startTime="0.2" endTime="0.1" visibility="true" />
+
+            <sound template="metalClose" startTime="0.01" direction="-1" volumeScale="0.7" pitchScale="2.8"/>
+            <sound template="metalClose" startTime="0.4" direction="1" volumeScale="0.7" pitchScale="2.8"/>
+            <sound template="clackVar1"  startTime="0.1" direction="1"  volumeScale="1.3" pitchScale="1.8"/>
+            <sound template="clackVar1"  startTime="0.4" direction="-1"  volumeScale="1.3" pitchScale="1.8"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="wheelArmLeft01" wheelIndices="1" playSound="true" >
+                <dependentPart node="wheelArmLeft01Hydraulic" />
+            </movingTool>
+            <movingTool node="wheelArmRight01" wheelIndices="2" playSound="true" >
+                <dependentPart node="wheelArmRight01Hydraulic" />
+            </movingTool>
+            <movingTool node="smallDrumArm" playSound="true" >
+                <dependentPart node="smallDrumArmHydraulic" />
+            </movingTool>
+            <movingTool node="lockArm01" playSound="false" >
+                <dependentPart node="lockArm02" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="upperPart" referencePoint="upperPartRef" referenceFrame="upperPartRef" isActiveDirty="true" maxUpdateDistance="100"/>
+            <movingPart node="net" referencePoint="netRef" referenceFrame="netRef" isActiveDirty="true" maxUpdateDistance="100"/>
+            <movingPart node="wheelArmLeft01Hydraulic" referencePoint="wheelArmLeft01HydraulicRef" referenceFrame="wheelArmLeft01HydraulicRefFrame" >
+                <translatingPart node="wheelArmLeft01HydraulicPunch" />
+            </movingPart>
+            <movingPart node="wheelArmRight01Hydraulic" referencePoint="wheelArmRight01HydraulicRef" referenceFrame="wheelArmRight01HydraulicRefFrame" >
+                <translatingPart node="wheelArmRight01HydraulicPunch" />
+            </movingPart>
+            <movingPart node="smallDrumArmHydraulic" referencePoint="smallDrumArmHydraulicRef" referenceFrame="smallDrumArmHydraulicRef" >
+                <translatingPart node="smallDrumArmHydraulicPunch" />
+            </movingPart>
+            <movingPart node="upperPartHydraulic" referencePoint="upperPartHydraulicRef" referenceFrame="upperPartHydraulicRef" isActiveDirty="true" maxUpdateDistance="45">
+                <translatingPart node="upperPartHydraulicPunch" />
+            </movingPart>
+            <movingPart node="upperPartDamper" referencePoint="upperPartDamperRef" referenceFrame="upperPartDamperRef" isActiveDirty="true" maxUpdateDistance="45">
+                <translatingPart node="upperPartDamperPunch" />
+            </movingPart>
+            <movingPart node="netHydraulic" referencePoint="netHydraulicRef" referenceFrame="netHydraulicRef" isActiveDirty="true" maxUpdateDistance="45">
+                <translatingPart node="netHydraulicPunch" />
+            </movingPart>
+            <movingPart node="lockArm02" referencePoint="lockArm02Ref" referenceFrame="lockArm02Ref"/>
+        </movingParts>
+    </cylindered>
+
+    <cutter fruitTypeCategories="pickup" fruitTypeConverter="forageHarvester" useWindrowed="true">
+        <fillEffect>
+            <effectNode effectClass="TypedMotionPathEffect" effectType="PICKUPIN" linkNode="pickupEffectLinkNode">
+                <motionPathEffect textureFilename="$data/vehicles/claas/pickUp300/pickupArray.dds" numRows="16" rowLength="15" minFade="0.15"/>
+            </effectNode>
+            <effectNode effectClass="ParticleEffect" effectNode="pickupSmokeEmitter" particleType="SMOKE" materialType="smokeParticle" useFruitColor="true" emitCountScale="0.5"/>
+            <effectNode effectClass="ParticleEffect" effectNode="pickupSmokeEmitter" particleType="SMOKE" materialType="smokeParticle" useFruitColor="true" emitCountScale="0.5" worldSpace="false"/>
+        </fillEffect>
+        <animationNodes>
+            <animationNode node="mainDrum" rotAxis="1" rotSpeed="800"  turnOnFadeTime="2" turnOffFadeTime="4"/>
+            <animationNode node="spikes" rotAxis="1" rotSpeed="-600" turnOnFadeTime="2" turnOffFadeTime="4"/>
+        </animationNodes>
+        <sounds>
+            <cut template="cropCuttingForage" />
+        </sounds>
+    </cutter>
+
+    <suspensions>
+        <suspension node="suepensionNode" weight="500" minTranslation="0 -0.10 0.0" maxTranslation="0 0.4 0.0" suspensionParametersX="200 17" suspensionParametersY="50 5" suspensionParametersZ="200 17" />
+    </suspensions>
+
+    <turnOnVehicle turnedOnByAttacherVehicle="true" turnOffIfNotAllowed="true">
+        <sounds>
+            <work  template="forageHarvesterWork"  pitchScale="0.7"  volumeScale="1.6" fadeIn="1" fadeOut="5"/>
+        </sounds>
+    </turnOnVehicle>
+
+    <ai>
+        <agentAttachment width="3.0" height="1.65" length="1.5" lengthOffset="0"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.55" maxX="1.55" minZ="-0.7" maxZ="0.75" yOffset="0.35" />
+        <bendingNode minX="-0.1" maxX="0.3" minZ="0.1" maxZ="0.7" yOffset="-0.35" node="wheelArmLeft01HydraulicRef" />
+        <bendingNode minX="-0.3" maxX="0.1" minZ="0.1" maxZ="0.7" yOffset="-0.35" node="wheelArmRight01HydraulicRef" />
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="pickUp300_mat" baseNode="pickUp300_vis">
+            <shaderParameter name="colorMat0" value="CLAAS_GREEN1"/>
+            <shaderParameter name="colorMat4" value="CLAAS_DARKGREY2"/>
+        </material>
+    </baseMaterial>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="pickUp300_main_component1" node="0>" />
+        <i3dMapping id="pickUp300_vis" node="0>0" />
+        <i3dMapping id="attacherJoint" node="0>0|0|0" />
+        <i3dMapping id="supportArmLeft" node="0>0|0|1|0|0" />
+        <i3dMapping id="supportArmRightDetached" node="0>0|0|1|1" />
+        <i3dMapping id="supportArmRightAttached" node="0>0|0|1|2" />
+        <i3dMapping id="wheelMiddle" node="0>0|1|0" />
+        <i3dMapping id="upperPartRot" node="0>0|2|0" />
+        <i3dMapping id="upperPart" node="0>0|2|0|0" />
+        <i3dMapping id="mainDrum" node="0>0|2|0|0|0" />
+        <i3dMapping id="smallDrumArm" node="0>0|2|0|0|1" />
+        <i3dMapping id="smallDrumHolder" node="0>0|2|0|0|1|0" />
+        <i3dMapping id="smallDrum01" node="0>0|2|0|0|1|0|0" />
+        <i3dMapping id="smallDrum02" node="0>0|2|0|0|1|0|1" />
+        <i3dMapping id="smallDrumArmHydraulic" node="0>0|2|0|0|1|1" />
+        <i3dMapping id="smallDrumArmHydraulicPunch" node="0>0|2|0|0|1|1|0" />
+        <i3dMapping id="upperPartHydraulicRef" node="0>0|2|0|0|3" />
+        <i3dMapping id="upperPartDamperRef" node="0>0|2|0|0|4" />
+        <i3dMapping id="smallDrumArmHydraulicRef" node="0>0|2|0|0|5" />
+        <i3dMapping id="spikes" node="0>0|2|1" />
+        <i3dMapping id="wheelArmLeft01" node="0>0|2|2|0" />
+        <i3dMapping id="wheelArmLeft02" node="0>0|2|2|0|0|0" />
+        <i3dMapping id="wheelLeft" node="0>0|2|2|0|0|0|0|0" />
+        <i3dMapping id="wheelArmLeft01HydraulicRef" node="0>0|2|2|0|1" />
+        <i3dMapping id="wheelArmRight01" node="0>0|2|3|0" />
+        <i3dMapping id="wheelArmRight02" node="0>0|2|3|0|0|0" />
+        <i3dMapping id="wheelRight" node="0>0|2|3|0|0|0|0|0" />
+        <i3dMapping id="wheelArmRight01HydraulicRef" node="0>0|2|3|0|1" />
+        <i3dMapping id="net" node="0>0|2|4" />
+        <i3dMapping id="netHydraulic" node="0>0|2|4|0" />
+        <i3dMapping id="netHydraulicPunch" node="0>0|2|4|0|0" />
+        <i3dMapping id="lockArm01" node="0>0|2|5" />
+        <i3dMapping id="lockArm02" node="0>0|2|5|0" />
+        <i3dMapping id="lockArm03" node="0>0|2|6" />
+        <i3dMapping id="lockArm02Ref" node="0>0|2|6|0" />
+        <i3dMapping id="hoseArm" node="0>0|2|7" />
+        <i3dMapping id="hydraulicIn01" node="0>0|2|7|0|0" />
+        <i3dMapping id="hydraulicIn01_detached" node="0>0|2|7|0|0|0" />
+        <i3dMapping id="hydraulicIn01_connector" node="0>0|2|7|0|0|0|0" />
+        <i3dMapping id="hydraulicOut01" node="0>0|2|7|0|1" />
+        <i3dMapping id="hydraulicOut01_detached" node="0>0|2|7|0|1|0" />
+        <i3dMapping id="hydraulicOut01_connector" node="0>0|2|7|0|1|0|0" />
+        <i3dMapping id="electricCable" node="0>0|2|7|0|2" />
+        <i3dMapping id="electricIn01_detached" node="0>0|2|7|0|2|0" />
+        <i3dMapping id="electricIn01_connector" node="0>0|2|7|0|2|0|0" />
+        <i3dMapping id="suepensionNode" node="0>0|2|8" />
+        <i3dMapping id="upperPartRef" node="0>0|2|8|0" />
+        <i3dMapping id="netRef" node="0>0|2|8|1" />
+        <i3dMapping id="wheelArmLeft01Hydraulic" node="0>0|3|0" />
+        <i3dMapping id="wheelArmLeft01HydraulicPunch" node="0>0|3|0|0" />
+        <i3dMapping id="wheelArmRight01Hydraulic" node="0>0|3|1" />
+        <i3dMapping id="wheelArmRight01HydraulicPunch" node="0>0|3|1|0" />
+        <i3dMapping id="upperPartHydraulic" node="0>0|3|2" />
+        <i3dMapping id="upperPartHydraulicPunch" node="0>0|3|2|0" />
+        <i3dMapping id="upperPartDamper" node="0>0|3|3" />
+        <i3dMapping id="upperPartDamperPunch" node="0>0|3|3|0" />
+        <i3dMapping id="wheelArmLeft01HydraulicRefFrame" node="0>0|3|4" />
+        <i3dMapping id="wheelArmRight01HydraulicRefFrame" node="0>0|3|5" />
+        <i3dMapping id="upperPartJoint" node="0>0|3|6" />
+        <i3dMapping id="netHydraulicRef" node="0>0|3|7" />
+        <i3dMapping id="areaStart" node="0>0|4|0" />
+        <i3dMapping id="areaWidth" node="0>0|4|1" />
+        <i3dMapping id="areaHeight" node="0>0|4|2" />
+        <i3dMapping id="depthNode" node="0>0|4|3" />
+        <i3dMapping id="pickupEffectLinkNode" node="0>0|6|0" />
+        <i3dMapping id="pickupSmokeEmitter" node="0>0|6|1" />
+    </i3dMappings>
+</vehicle>

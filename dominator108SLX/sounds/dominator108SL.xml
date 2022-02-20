@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+            <motor template="engineLarge" file="dominator108SL/sounds/dominator108SL_loop.gls" volumeScale="1.45"/>
+            <motor template="indoorCabinRumble" />
+            <gearbox template="transmissionHarvester" pitchScale="1.1" volumeScale="2"/>
+            <reverseDrive template="REVERSE_BEEP_01" />
+            <motor template="filterLoop" volumeScale="0.8" fadeIn="3" fadeOut="2" linkNode="airFilterCleaner1"/> 
+        </sounds>
+    </motorized>
+
+    <lights>
+        <sounds>
+            <toggleLights template="SWITCH_01"  />
+            <turnLight template="SWITCH_TURNLIGHT"  />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="HEADER_ATTACH_01" linkNode="attacherJoint"/>
+            <hydraulic template="defaultHydraulicHarvesters" linkNode="attacherJoint"/>
+        </sounds>   
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="WATER_SPLASH_01" />
+        </sounds>
+    </drivable>
+
+   <combine>
+        <sounds>
+            <chopperWork template="harvesterChopper" linkNode="strawChopper" fadeIn="2"/>
+            <chopStraw   template="chopStrawDischarge" linkNode="strawChopper"/>
+            <dropStraw   template="dropStrawDischarge" linkNode="strawChopper"/>
+            <fill file="$data/sounds/tools/fillTypes/grainMediumFillLoop.wav" innerRadius="2.0" outerRadius="8.0" fadeIn="0.5" fadeOut="1.0" linkNode="grainTankAuger">
+                <volume indoor="0.60" outdoor="1.50" />
+                <pitch indoor="0.7" outdoor="0.7" />
+                <lowpassGain indoor="0.30" outdoor="1.00" />
+                <randomization maxVolume="0.2" isInside="true" isOutside="true"/>
+            </fill>
+        </sounds>
+    </combine> 
+
+    <honk>
+        <sound template="HONK_IDEAL9T" />
+    </honk>
+</sounds>

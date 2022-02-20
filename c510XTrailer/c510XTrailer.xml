@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dynamicMountAttacherTrailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name params="$l10n_storeItem_headerTrailer">C510 %s</name>
+        <specs>
+            <combination xmlFilename="dominator108SLX/dominator108SLX.xml"/>
+            <combination xmlFilename="c510X/c510X.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutterTrailer</function>
+        </functions>
+        <image>c510XTrailer/store_c510Trailer.png</image>
+        <price>850</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>CLAAS</brand>
+        <category>cutterTrailers</category>
+        <shopTranslationOffset>0 0.044 0</shopTranslationOffset>
+        <storePacks>
+            <storePack>STARTER_GRAINS</storePack>
+        </storePacks>
+        <shopRotationOffset>1.405 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_cutterTrailer</typeDesc>
+        <filename>c510XTrailer/c510Trailer.i3d</filename>
+        <size width="3" length="9.5"/>
+        <components>
+            <component centerOfMass="0 0.5 -1" solverIterationCount="10" mass="2315"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+    </base>
+
+     <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics restLoad="1.1" repr="wheelLeft"  forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="41" damper="20"/>
+                        <wheelChock parkingNode="wheelChock01" />
+                        <wheelChock parkingNode="wheelChock02" isInverted="true" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/300_80R15_3.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics restLoad="1.1" repr="wheelRight" forcePointRatio="0.25" initialCompression="25" suspTravel="0.1" spring="41" damper="20" />
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <rimColor>CLAAS_RED1</rimColor>
+
+        <hubs>
+            <color0>CLAAS_GREEN1</color0>
+            <hub linkNode="wheelLeft"  filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="true"  scale="0.203 0.203 0.203" />
+            <hub linkNode="wheelRight" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.203 0.203 0.203" />
+        </hubs>
+    </wheels>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" attacherHeight="0.85"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport" />
+        <brakeForce force="0.4"/>
+    </attachable>
+
+    <lights>
+        <sharedLight linkNode="Light_03" filename="$data/shared/assets/lights/lizard/rearLight05_left.xml" />
+        <sharedLight linkNode="Light_04" filename="$data/shared/assets/lights/lizard/rearLight05_right.xml" />
+        <sharedLight linkNode="redRound_02" filename="$data/shared/assets/reflectors/lizard/redRound_02.xml" />
+        <sharedLight linkNode="redRound_03" filename="$data/shared/assets/reflectors/lizard/redRound_02.xml" />
+        <sharedLight linkNode="reflectorYellowRound_03" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_04" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_05" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="reflectorYellowRound_06" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="redTriangle_01" filename="$data/shared/assets/reflectors/lizard/redTriangle_01.xml" />
+        <sharedLight linkNode="redTriangle_02" filename="$data/shared/assets/reflectors/lizard/redTriangle_01.xml" />
+
+        <realLights>
+            <high>
+                <light node="backLightsHigh1" lightTypes="0" />
+                <turnLightLeft node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+                <brakeLight node="backLightsHigh1" />
+            </high>
+        </realLights>
+    </lights>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|1" linkNode="electricNode_adapter"  filename="$data/shared/connectionHoses/connectors.i3d" />
+    </dynamicallyLoadedParts>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric"  node="electricNode"  length="2" diameter="0.02" straighteningFactor="0.5" >
+            <objectChange node="detachedHose" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+    </connectionHoses>
+
+    <dynamicMountAttacher triggerNode="dynamicMountTrigger" rootNode="c510Trailer_main_component1" jointNode="c510Trailer_main_component1" forceAcceleration="500" mountType="TYPE_AUTO_ATTACH_XZ" transferMass="true">
+        <lockPosition xmlFilename="c510/c510.xml" jointNode="cutterJointNodeC510" />
+    </dynamicMountAttacher>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="supportCol"         startTime="0" endTime="0.4" startTrans="0 0.648 2.163" endTrans="0 0.261 2.163" />
+            <part node="supportArm"         startTime="0" endTime="0.4" startRot="0 -90 0" endRot="0 0 0" />
+            <part node="supportArm"         startTime="0" endTime="0.4" startTrans="0 0.183 0" endTrans="0 0 0" />
+            <part node="supportArmWinder"   startTime="0" endTime="0.4" startRot="0 720 0" endRot="0 -720 0" />
+            <part node="supportArmPart"     startTime="0" endTime="0.4" startRot="0 0 -130" endRot="0 0 0" />
+        </animation>
+    </animations>
+
+    <ai>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2" width="2.6" height="2.2" length="9" lengthOffset="1.6"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-0.25" maxX="0.25" minZ="2.6" maxZ="4.2" yOffset="0.4" />
+        <bendingNode minX="-0.45" maxX="0.45" minZ="-4.5" maxZ="2.6" yOffset="0.4" />
+        <bendingNode minX="-1.25" maxX="1.25" minZ="-2.15" maxZ="-1.1" yOffset="0.4" />
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="c510Trailer_mat" baseNode="c510Trailer_vis">
+            <shaderParameter name="colorMat0" value="CLAAS_GREEN1"/>
+        </material>
+    </baseMaterial>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="c510Trailer_main_component1" node="0>" />
+        <i3dMapping id="c510Trailer_vis" node="0>0" />
+        <i3dMapping id="attacherJoint" node="0>0|0|0" />
+        <i3dMapping id="electricNode" node="0>0|0|1|0" />
+        <i3dMapping id="detachedHose" node="0>0|0|1|0|0" />
+        <i3dMapping id="electricNode_adapter" node="0>0|0|1|0|0|0" />
+        <i3dMapping id="supportArm" node="0>0|0|2|0|0" />
+        <i3dMapping id="supportArmPart" node="0>0|0|2|0|0|0" />
+        <i3dMapping id="supportArmWinder" node="0>0|0|2|1" />
+        <i3dMapping id="supportCol" node="0>0|0|2|2" />
+        <i3dMapping id="wheelLeft" node="0>0|1|0" />
+        <i3dMapping id="wheelRight" node="0>0|1|1" />
+        <i3dMapping id="wheelChock01" node="0>0|1|2|0" />
+        <i3dMapping id="wheelChock02" node="0>0|1|2|1" />
+        <i3dMapping id="Light_03" node="0>0|2|0|0" />
+        <i3dMapping id="Light_04" node="0>0|2|0|1" />
+        <i3dMapping id="redRound_02" node="0>0|2|0|2" />
+        <i3dMapping id="redRound_03" node="0>0|2|0|3" />
+        <i3dMapping id="reflectorYellowRound_03" node="0>0|2|0|4" />
+        <i3dMapping id="reflectorYellowRound_05" node="0>0|2|0|5" />
+        <i3dMapping id="reflectorYellowRound_04" node="0>0|2|0|6" />
+        <i3dMapping id="reflectorYellowRound_06" node="0>0|2|0|7" />
+        <i3dMapping id="redTriangle_01" node="0>0|2|0|8" />
+        <i3dMapping id="redTriangle_02" node="0>0|2|0|9" />
+        <i3dMapping id="backLightsHigh1" node="0>0|2|1|0" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|2|2|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|2|2|1" />
+        <i3dMapping id="dynamicMountTrigger" node="0>0|3" />
+        <i3dMapping id="cutterJointNodeC510" node="0>0|4" />
+    </i3dMappings>
+</vehicle>

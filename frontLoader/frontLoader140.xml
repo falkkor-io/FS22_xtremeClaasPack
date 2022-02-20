@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="attachableFrontloader" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>FL 140</name>
+        <specs>
+            <neededPower>145</neededPower>
+            <combination xmlFilename="$data/vehicles/claas/arion600/arion600.xml"/>
+            <combination filterCategory="frontLoaderTools" />
+        </specs>
+        <functions>
+            <function>$l10n_function_frontloader</function>
+        </functions>
+        <storePacks>
+            <storePack>STARTER_TRANSPORT</storePack>
+        </storePacks>
+        <image>$data/vehicles/claas/frontLoader140/store_frontLoader140.png</image>
+        <price>9500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>CLAAS</brand>
+        <category>frontLoaders</category>
+        <shopTranslationOffset>0 0.154 0.031</shopTranslationOffset>
+        <shopRotationOffset>3.975 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>706048</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>133376</indexBufferMemoryUsage>
+        <textureMemoryUsage>851968</textureMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_frontloader</typeDesc>
+        <filename>$data/vehicles/claas/frontLoader140/frontLoader140.i3d</filename>
+        <size width="2.5" length="3.2" lengthOffset="-0.1" />
+        <components>
+            <component centerOfMass="0 0.2 0.4" solverIterationCount="10" mass="630" />
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="FRONTLOADER" />
+    </base>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" hardAttach="true" jointType="attachableFrontloader" />
+        </inputAttacherJoints>
+        <support animationName="moveSupport" />
+    </attachable>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn01_detachedAdapter"  filename="$data/shared/connectionHoses/connectors.i3d" />
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn02_detachedAdapter"  filename="$data/shared/connectionHoses/connectors.i3d" />
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn03_detachedAdapter"  filename="$data/shared/connectionHoses/connectors.i3d" />
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn04_detachedAdapter"  filename="$data/shared/connectionHoses/connectors.i3d" />
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn05_detachedAdapter"  filename="$data/shared/connectionHoses/connectors.i3d" />
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn06_detachedAdapter"  filename="$data/shared/connectionHoses/connectors.i3d" />
+    </dynamicallyLoadedParts>
+
+    <attacherJoints>
+        <attacherJoint jointType="frontloader" node="attacherJointTools" nodeVisual="attacherJointTools_visuals" allowsJointLimitMovement="false" allowsLowering="false" rotLimitSpring="7500 7500 7500" rotLimitDamping="5 5 5" transLimitSpring="7500 7500 7500" transLimitDamping="5 5 5" >
+            <schema position="1 0" rotation="0" invertX="false" />
+        </attacherJoint>
+        <sounds>
+            <attach template="ATTACH_01" linkNode="frontloader140_main_component1" />
+        </sounds>
+    </attacherJoints>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn01"  length="1.6" diameter="0.015" straighteningFactor="0.3" dampingFactor="0">
+            <objectChange node="detachedHose" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn02"  length="1.6" diameter="0.015" straighteningFactor="0.3" dampingFactor="0"/>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn03"  length="1.6" diameter="0.015" straighteningFactor="0.3" dampingFactor="0"/>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn04"  length="1.6" diameter="0.015" straighteningFactor="0.3" dampingFactor="0"/>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn05"  length="1.6" diameter="0.015" straighteningFactor="0.3" dampingFactor="0"/>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn06"  length="1.6" diameter="0.015" straighteningFactor="0.3" dampingFactor="0"/>
+    </connectionHoses>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="supportArm" startTime="0" endTime="0.3" startRot="72 0 0"  endRot="0 0 0" />
+
+            <sound template="clackVar5" startTime="0.01" direction="0" volumeScale="0.7" pitchScale="2.8" linkNode="supportArm"/>
+            <sound template="clackVar1"  startTime="0.29" direction="0" volumeScale="0.7" pitchScale="2"   linkNode="supportArm"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="armDummy" delayedNode="arm">
+                <controls axis="AXIS_FRONTLOADER_ARM" invertAxis="true" mouseSpeedFactor="0.8" iconName="FRONTLOADER_ARM_ROTATE" />
+                <attacherJoint jointIndices="1" />
+                <rotation rotSpeed="20" rotAcceleration="150" rotMax="10" rotMin="-75" startRot="6" detachingRotMinLimit="-10" />
+                <dependentPart node="attacherRotDummy" />
+                <dependentMovingTool node="attacherDummy" minRotLimits="-134 -170" maxRotLimits="45 -20"/>
+            </movingTool>
+            <movingTool node="attacherDummy" delayedNode="attacher">
+                <controls axis="AXIS_FRONTLOADER_TOOL" invertAxis="true" mouseSpeedFactor="0.6" iconName="FRONTLOADER_ARM_ROTATE_TOOL" />
+                <attacherJoint jointIndices="1" />
+                <rotation rotSpeed="50" rotAcceleration="300" rotMax="0" rotMin="-130" startRot="-88" syncMaxRotLimits="true" />
+            </movingTool>
+
+            <movingTool node="arm">
+                <dependentPart node="hydraulicMain" />
+                <dependentPart node="secondHydraulicMain" />
+                <dependentPart node="attacherRot" />
+                <dependentPart node="angleDisplayPart02" />
+            </movingTool>
+
+            <movingTool node="attacher">
+                <dependentPart node="wingFront" />
+                <dependentPart node="angleDisplayPart02" />
+            </movingTool>
+            <movingTool node="supportArm">
+                <dependentPart node="supportArmPart" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="attacherRotDummy" referenceFrame="attacherRootDummy">
+                <attacherJoint jointIndices="1" />
+            </movingPart>
+
+            <movingPart node="attacherRot" referenceFrame="frontloader140_main_component1">
+                <dependentPart node="wingFront" />
+                <dependentPart node="hydraulicMain" />
+                <dependentPart node="secondHydraulicMain" />
+            </movingPart>
+
+            <movingPart node="supportArmPart" referencePoint="supportArmPartRef" referenceFrame="supportArmPartRef"/>
+            <movingPart node="hydraulicMain" referencePoint="hydraulicMainRef" referenceFrame="arm" playSound="true">
+                <translatingPart node="hydraulicMainPunch" />
+            </movingPart>
+            <movingPart node="secondHydraulicMain" referencePoint="secondHydraulicMainRef" referenceFrame="arm" playSound="true">
+               <translatingPart node="secondHydraulicMainPunch" />
+           </movingPart>
+
+            <movingPart node="wingFront" localReferencePoint="wingPart" referencePoint="wingFrontRef" referenceFrame="wingFrontRefFrame" >
+                <dependentPart node="wingPart" />
+                <dependentPart node="hydraulicFront" />
+            </movingPart>
+            <movingPart node="wingPart" referencePoint="wingFrontRef" referenceFrame="wingPartRefFrame"/>
+
+            <movingPart node="hydraulicFront" referencePoint="hydraulicFrontRef" referenceFrame="hydraulicFrontRef" playSound="true">
+                <translatingPart node="hydraulicFrontPunch" />
+            </movingPart>
+
+            <movingPart node="angleDisplayPart02" localReferencePoint="angleDisplayPart02LocalRef" referencePoint="angleDisplayPart02Ref" referenceFrame="angleDisplayPart02RefFrame" >
+                <dependentPart node="angleDisplayPart01" />
+                <dependentPart node="angleDisplayPart04" />
+            </movingPart>
+            <movingPart node="angleDisplayPart01" referencePoint="angleDisplayPart02Ref" referenceFrame="angleDisplayPart02Ref"/>
+            <movingPart node="angleDisplayPart03" referencePoint="angleDisplayPart03Ref" referenceFrame="angleDisplayPart03Ref"/>
+            <movingPart node="angleDisplayPart04" referencePoint="angleDisplayPart04Ref" referenceFrame="angleDisplayPart04RefFrame">
+                <dependentPart node="angleDisplayPart03" />
+            </movingPart>
+        </movingParts>
+
+        <sounds>
+            <actionSound template="hydraulicLayerTone2"   pitchScale="1.5" volumeScale="1.2" linkNode="hydraulicMain"   actionNames="TRANSLATING_POS TRANSLATING_NEG" nodes="hydraulicMain" fadeIn="0.1" fadeOut="0.05"/>
+            <actionSound template="hydraulicLayerTone"    pitchScale="0.7" volumeScale="1.2" linkNode="hydraulicMain"   actionNames="TRANSLATING_POS" nodes="hydraulicMain" fadeIn="0.1" fadeOut="0.05"/>
+            <actionSound template="hydraulicLayerTone2"   pitchScale="2.5" volumeScale="0.4" linkNode="hydraulicFront" actionNames="TRANSLATING_POS TRANSLATING_NEG" nodes="hydraulicFront" fadeIn="0.1" fadeOut="0.05"/>
+            <actionSound template="defaultHydraulicSound" pitchScale="1.1" volumeScale="0.8" linkNode="hydraulicFront" actionNames="TRANSLATING_POS TRANSLATING_NEG" nodes="hydraulicFront" fadeIn="0.1" fadeOut="0.05"/>
+            <actionSound template="metalLowVar2"  pitchScale="1.0" volumeScale="3"   linkNode="armDummy"   actionNames="TOOL_MOVE_END_POS_LIMIT" nodes="armDummy"/>
+            <actionSound template="cylinderPunch" pitchScale="1.5" volumeScale="0.4" linkNode="armDummy"   actionNames="TOOL_MOVE_END_POS_LIMIT" nodes="armDummy"/>
+            <actionSound template="metalClose"    pitchScale="2.5" volumeScale="0.2" linkNode="armDummy"   actionNames="TOOL_MOVE_END_POS_LIMIT" nodes="armDummy"/>
+            <actionSound template="clackVar6"     pitchScale="1.0" volumeScale="1.0" linkNode="armDummy"   actionNames="TOOL_MOVE_END_POS_LIMIT" nodes="armDummy"/>
+
+            <actionSound template="metalLowVar2"  pitchScale="1.3" volumeScale="2.0"   linkNode="armDummy" actionNames="TOOL_MOVE_END_NEG_LIMIT" nodes="armDummy"/>
+            <actionSound template="cylinderPunch" pitchScale="1.8" volumeScale="0.2" linkNode="armDummy"   actionNames="TOOL_MOVE_END_NEG_LIMIT" nodes="armDummy"/>
+            <actionSound template="metalClose"    pitchScale="2.8" volumeScale="0.1" linkNode="armDummy"   actionNames="TOOL_MOVE_END_NEG_LIMIT" nodes="armDummy"/>
+            <actionSound template="clackVar6"     pitchScale="1.8" volumeScale="0.5" linkNode="armDummy"   actionNames="TOOL_MOVE_END_NEG_LIMIT" nodes="armDummy"/>
+        </sounds>
+    </cylindered>
+
+    <ai>
+        <agentAttachment width="1.3" height="2.2" length="2.8" lengthOffset="-0.2"/>
+    </ai>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <foliageBending>
+        <bendingNode minX="-0.6" maxX="0.6" minZ="-0.55" maxZ="1.9" yOffset="-0.2" node="hydraulicFront" />
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="frontLoader_mat" baseNode="frontloader140_vis">
+            <shaderParameter name="colorMat0" value="CLAAS_GREEN1"/>
+            <shaderParameter name="colorMat1" value="CLAAS_DARKGREY2"/>
+        </material>
+    </baseMaterial>
+	
+	<baseMaterialConfigurations useDefaultColors="false" defaultColorIndex="0">
+		<baseMaterialConfiguration name="$l10n_colorClaasGreen" color="CLAAS_GREEN1" price="0"/>
+		<baseMaterialConfiguration name="$l10n_colorWein" color="0.13 0 0"  material="0" price="3500"/>
+		<baseMaterialConfiguration name="$l10n_colorTannen" color="0.0029 0.0254 0.0046 0" price="3500"/>
+		<baseMaterialConfiguration name="$l10n_colorBlack" color="FENDT_BLACK1" price="1500"/>
+		<baseMaterialConfiguration name="$l10n_colorWhite" color="CLAAS_WHITE1" price="1500"/>
+		<baseMaterialConfiguration name="$l10n_colorcommunal" color="FENDT_ORANGE1" price="2500"/>
+		<baseMaterialConfiguration name="$l10n_colorGrey" color="0.294 0.294 0.294" material="0" price="4500" />
+		<baseMaterialConfiguration name="$l10n_colorGreyGlossy" color="0.294 0.294 0.294" material="27" price="4500" />
+		<baseMaterialConfiguration name="$l10n_colorBeige" color="0.61 0.5 0.187" material="0" price="3000" />  		
+        <material name="frontLoader_mat" shaderParameter="colorMat0" />
+    </baseMaterialConfigurations>
+
+    <i3dMappings>
+        <i3dMapping id="frontloader140_main_component1" node="0>" />
+        <i3dMapping id="frontloader140_vis" node="0>0" />
+        <i3dMapping id="attacherJoint" node="0>0|0" />
+        <i3dMapping id="arm" node="0>0|1|0" />
+        <i3dMapping id="attacherRot" node="0>0|1|0|0" />
+        <i3dMapping id="attacher" node="0>0|1|0|0|0" />
+        <i3dMapping id="attacherJointTools_visuals" node="0>0|1|0|0|0|0" />
+        <i3dMapping id="wingFrontRef" node="0>0|1|0|0|0|1" />
+        <i3dMapping id="hydraulicMain" node="0>0|1|0|1" />
+        <i3dMapping id="hydraulicMainPunch" node="0>0|1|0|1|0" />
+        <i3dMapping id="secondHydraulicMain" node="0>0|1|0|2" />
+        <i3dMapping id="secondHydraulicMainPunch" node="0>0|1|0|2|0" />
+        <i3dMapping id="hydraulicFront" node="0>0|1|0|3" />
+        <i3dMapping id="hydraulicFrontPunch" node="0>0|1|0|3|0" />
+        <i3dMapping id="wingFront" node="0>0|1|0|4" />
+        <i3dMapping id="wingPart" node="0>0|1|0|4|0" />
+        <i3dMapping id="angleDisplayPart03" node="0>0|1|0|4|1" />
+        <i3dMapping id="angleDisplayPart04Ref" node="0>0|1|0|4|2" />
+        <i3dMapping id="hydraulicFrontRef" node="0>0|1|0|4|3" />
+        <i3dMapping id="supportArm" node="0>0|1|0|5|0" />
+        <i3dMapping id="supportArmPartRef" node="0>0|1|0|5|0|1" />
+        <i3dMapping id="supportArmPart" node="0>0|1|0|5|1" />
+        <i3dMapping id="angleDisplayPart02" node="0>0|1|0|6" />
+        <i3dMapping id="angleDisplayPart01" node="0>0|1|0|6|0" />
+        <i3dMapping id="angleDisplayPart04" node="0>0|1|0|6|1" />
+        <i3dMapping id="angleDisplayPart03Ref" node="0>0|1|0|6|1|0" />
+        <i3dMapping id="angleDisplayPart02LocalRef" node="0>0|1|0|6|2" />
+        <i3dMapping id="wingFrontRefFrame" node="0>0|1|0|9" />
+        <i3dMapping id="angleDisplayPart01Ref" node="0>0|1|0|10" />
+        <i3dMapping id="detachedHose" node="0>0|1|0|12|0" />
+        <i3dMapping id="hydraulicIn01_detachedAdapter" node="0>0|1|0|12|0|0" />
+        <i3dMapping id="hydraulicIn02_detachedAdapter" node="0>0|1|0|12|0|1" />
+        <i3dMapping id="hydraulicIn03_detachedAdapter" node="0>0|1|0|12|0|2" />
+        <i3dMapping id="hydraulicIn04_detachedAdapter" node="0>0|1|0|12|0|3" />
+        <i3dMapping id="hydraulicIn05_detachedAdapter" node="0>0|1|0|12|0|4" />
+        <i3dMapping id="hydraulicIn06_detachedAdapter" node="0>0|1|0|12|0|5" />
+        <i3dMapping id="hydraulicIn01" node="0>0|1|0|12|1" />
+        <i3dMapping id="hydraulicIn02" node="0>0|1|0|12|2" />
+        <i3dMapping id="hydraulicIn03" node="0>0|1|0|12|3" />
+        <i3dMapping id="hydraulicIn04" node="0>0|1|0|12|4" />
+        <i3dMapping id="hydraulicIn05" node="0>0|1|0|12|5" />
+        <i3dMapping id="hydraulicIn06" node="0>0|1|0|12|6" />
+        <i3dMapping id="angleDisplayPart02RefFrame" node="0>0|1|0|13" />
+        <i3dMapping id="wingPartRefFrame" node="0>0|1|0|14" />
+        <i3dMapping id="angleDisplayPart04RefFrame" node="0>0|1|0|15" />
+        <i3dMapping id="armDummy" node="0>0|1|1" />
+        <i3dMapping id="attacherRotDummy" node="0>0|1|1|0" />
+        <i3dMapping id="attacherDummy" node="0>0|1|1|0|0" />
+        <i3dMapping id="attacherJointTools" node="0>0|1|1|0|0|0" />
+        <i3dMapping id="attacherRootDummy" node="0>0|1|2" />
+        <i3dMapping id="attacherJointDummy" node="0>0|1|2|0" />
+        <i3dMapping id="hydraulicMainRef" node="0>0|2" />
+        <i3dMapping id="secondHydraulicMainRef" node="0>0|3" />
+        <i3dMapping id="angleDisplayPart02Ref" node="0>0|5" />
+    </i3dMappings>
+</vehicle>

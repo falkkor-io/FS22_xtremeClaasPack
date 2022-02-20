@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="c510" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml" />
+    <File fileId="1" filename="$data/shared/assets/assetLibraryDecals_diffuse.png" />
+    <File fileId="2" filename="$data/shared/assets/assetLibraryDecals_normal.png" />
+    <File fileId="14" filename="$data/shared/assets/assetLibraryStickers_diffuse.png" />
+    <File fileId="21" filename="$data/shared/default_normal.png" />
+    <File fileId="11" filename="c510_chain_normal.png" />
+    <File fileId="5" filename="c510_decals_diffuse.png" />
+    <File fileId="6" filename="c510_knives_diffuse.png" />
+    <File fileId="7" filename="c510_knives_normal.png" />
+    <File fileId="8" filename="c510_normal.png" />
+    <File fileId="12" filename="c510_starBig_diffuse.png" />
+    <File fileId="13" filename="c510_starBig_normal.png" />
+    <File fileId="9" filename="c510_starSmall_diffuse.png" />
+    <File fileId="10" filename="c510_starSmall_normal.png" />
+    <File fileId="3" filename="c510_vmask.png" />
+    <File fileId="20" filename="canolaModulesBladesDecals_diffuse.png" />
+    <File fileId="17" filename="canolaModulesBladesDecals_vmask.png" />
+    <File fileId="15" filename="canolaModulesBlades_diffuse.png" />
+    <File fileId="16" filename="canolaModulesBlades_normal.png" />
+    <File fileId="18" filename="canolaModules_normal.png" />
+    <File fileId="19" filename="canolaModules_vmask.png" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1">
+    </Material>
+    <Material name="assetLibraryDecals_mat" materialId="3" customShaderId="4" customShaderVariation="Decal_colorMask">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="c510_decals_mat" materialId="7" alphaBlending="true" customShaderId="4" customShaderVariation="Decal">
+      <Texture fileId="5"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="c510_knives_mat" materialId="13" customShaderId="4" customShaderVariation="Decal_colorMask">
+      <CustomParameter name="colorMat0" value="0.65 0.65 0.65 08"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="c510_vmask_mat" materialId="2" diffuseColor="0.5 0.5 0.5 1" customShaderId="4" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat3" value="0.9240 0.7893 0.0356 1"/>
+      <CustomParameter name="colorMat2" value="0.0001 0.1018 0.4288 0"/>
+      <CustomParameter name="colorMat0" value="0.2384 0.3186 0.0116 0"/>
+      <CustomParameter name="colorMat1" value="0.5310 0.0357 0.0112 0"/>
+      <CustomParameter name="colorMat4" value="0.9457 0.9157 0.9157 0"/>
+      <CustomParameter name="colorMat5" value="0.5310 0.0357 0.0112 1"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="c510_starSmall_mat" materialId="12" customShaderId="4" customShaderVariation="Decal_colorMask">
+      <Texture fileId="9"/>
+      <Normalmap fileId="10"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="c510_vmask_mat1" materialId="5" diffuseColor="0.5 0.5 0.5 1" customShaderId="4" customShaderVariation="uvScroll_colorMask">
+      <CustomParameter name="colorMat0" value="0.65 0.65 0.65 2"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="c510_starBig_mat" materialId="4" customShaderId="4" customShaderVariation="Decal_colorMask">
+      <CustomParameter name="colorMat0" value="0.5310 0.0357 0.0112 0"/>
+      <Texture fileId="12"/>
+      <Normalmap fileId="13"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="assetLibraryStickers_mat" materialId="6" customShaderId="4" customShaderVariation="Decal">
+      <Texture fileId="14"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="canolaModulesBlades_mat" materialId="11" customShaderId="4" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat2" value="0.4423 0.4423 0.4423 8"/>
+      <CustomParameter name="colorMat3" value="0.4423 0.4423 0.4423 8"/>
+      <CustomParameter name="colorMat0" value="0.4423 0.4423 0.4423 8"/>
+      <CustomParameter name="colorMat1" value="0.4423 0.4423 0.4423 8"/>
+      <CustomParameter name="colorMat6" value="0.4423 0.4423 0.4423 8"/>
+      <CustomParameter name="colorMat7" value="0.4423 0.4423 0.4423 8"/>
+      <CustomParameter name="colorMat4" value="0.4423 0.4423 0.4423 8"/>
+      <CustomParameter name="colorMat5" value="0.4423 0.4423 0.4423 8"/>
+      <Texture fileId="15"/>
+      <Normalmap fileId="16"/>
+      <Glossmap fileId="17"/>
+    </Material>
+    <Material name="canolaModules_vmask_mat" materialId="8" diffuseColor="0.5 0.5 0.5 1" customShaderId="4" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat2" value="0.1220 0.1220 0.1220 0"/>
+      <CustomParameter name="colorMat0" value="1 1 1 0"/>
+      <CustomParameter name="colorMat1" value="0.7742 0.0000 0.0072 0"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="19"/>
+    </Material>
+    <Material name="canolaModulesBladesDecals_mat" materialId="9" alphaBlending="true" customShaderId="4" customShaderVariation="Decal">
+      <Texture fileId="20"/>
+      <Normalmap fileId="21"/>
+      <Glossmap fileId="17"/>
+    </Material>
+    <Material name="assetLibraryDecals_mat1" materialId="10" customShaderId="4" customShaderVariation="Decal_colorMask">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="17"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="c510.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="c510_main_component1" shapeId="1" dynamic="true" compound="true" collisionMask="2109442" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <Shape name="c510_vis" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="2 14 16 17 18 19 20 21 22 23 26 31 32 40 41 42" nodeId="2">
+        <TransformGroup name="attachable" nodeId="3">
+          <TransformGroup name="attacherJoint" translation="1.06517e-16 0.832421 -1.07373" rotation="0 -90 0" nodeId="4"/>
+          <TransformGroup name="ptoInputNode" translation="2.13581 0.674643 -1.20731" rotation="0 90 0" nodeId="5"/>
+          <TransformGroup name="ptoDetachNode" translation="1.03942 0.742822 -1.20731" rotation="0 90 0" nodeId="6"/>
+          <TransformGroup name="connectionHoses" nodeId="7">
+            <Shape name="hydraulic01_in_adapter" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="8"/>
+            <Shape name="hydraulic01_out_adapter" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="9"/>
+            <TransformGroup name="hydraulic01_in" translation="-1.17627 0.770131 -1.16843" rotation="154.963 -2.37699 -178.89" nodeId="10"/>
+            <TransformGroup name="hydraulic01_out" translation="-1.2523 0.770131 -1.16843" rotation="154.963 -2.37699 -178.89" nodeId="11"/>
+            <TransformGroup name="hydraulic02_in" translation="-1.06025 0.837548 -1.16927" rotation="154.963 -2.37699 -178.89" nodeId="12"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="movingParts" nodeId="13">
+          <TransformGroup name="reelRot" translation="0 0.881759 -0.991386" collision="false" nodeId="14">
+            <TransformGroup name="reelMoveRot" translation="0.0209691 0.113319 1.1982" rotation="-90 -15.4906 90" scale="1 1 1" nodeId="15">
+              <TransformGroup name="reelMove" translation="6.08653e-10 -2.05158e-10 2.87871e-08" scale="1 1 1" collision="false" nodeId="16">
+                <TransformGroup name="reel" translation="0.00321806 0.0308876 0.0318112" collision="false" nodeId="17">
+                  <TransformGroup name="part01" translation="0.214072 -0.483334 0.0141347" collision="false" nodeId="18"/>
+                  <TransformGroup name="part02" translation="0.525616 -0.0562747 0.0141348" collision="false" nodeId="19"/>
+                  <TransformGroup name="part03" translation="0.311543 0.427059 0.0141348" collision="false" nodeId="20"/>
+                  <TransformGroup name="part04" translation="-0.214073 0.483333 0.0141349" collision="false" nodeId="21"/>
+                  <TransformGroup name="part05" translation="-0.525616 0.0562744 0.0141348" collision="false" nodeId="22"/>
+                  <TransformGroup name="part06" translation="-0.311543 -0.427059 0.0141348" collision="false" nodeId="23"/>
+                  <Shape name="screws_decals" translation="3.01395e-16 2.97814e-17 4.87114e-24" shapeId="5" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="24"/>
+                  <Shape name="bigStar_decal" translation="0.000406625 -0.000402408 -2.67323" rotation="74.5094 90 0" shapeId="6" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="4" clipDistance="30" nodeId="25"/>
+                </TransformGroup>
+                <TransformGroup name="outerReel" translation="-0.00326281 -0.0304904 -2.50115" collision="false" nodeId="26">
+                  <Shape name="screws_decals" translation="3.68037e-16 1.03109e-16 -6.82336e-16" shapeId="7" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="27"/>
+                </TransformGroup>
+                <Shape name="reelChainDrive" translation="-0.429218 1.12441 0.0209691" rotation="74.5094 90 0" scale="1 1 1" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="30" nodeId="28"/>
+                <TransformGroup name="rightHydraulicRef" translation="-0.013764 0.0932479 2.64015" rotation="4.40917 89.9939 -74.5146" scale="1 1 1" nodeId="29"/>
+                <Shape name="colPart" translation="0.0292367 0.0361116 -0.11129" rotation="-90 -3.18055e-15 105.491" visibility="false" shapeId="9" compoundChild="true" density="0.001" collisionMask="2109442" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="30"/>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="rightHydraulic" translation="-2.61912 0.166667 0.564396" rotation="4.41442 -0.00611687 4.85314e-20" scale="1 1 1" collision="false" nodeId="31">
+              <TransformGroup name="rightHydraulicPunch" translation="4.98517e-13 -1.28786e-15 0.541871" collision="false" nodeId="32"/>
+              <TransformGroup name="rightHydraulicJoint" rotation="-4.41442 0.00609872 -0.000470815" nodeId="33"/>
+            </TransformGroup>
+            <TransformGroup name="reelRotHydraulicRef" translation="1.52588e-07 0.129395 0.3467" rotation="113.365 -0.0678901 180" nodeId="34"/>
+            <TransformGroup name="visuals" nodeId="35">
+              <Shape name="sticker_decal" shapeId="10" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="6" clipDistance="30" nodeId="36"/>
+              <Shape name="logo_decal" shapeId="11" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="7" clipDistance="30" nodeId="37"/>
+              <Shape name="screws_decal" shapeId="12" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="38"/>
+            </TransformGroup>
+            <TransformGroup name="reelRotJoint" nodeId="39"/>
+          </TransformGroup>
+          <TransformGroup name="reelRotHydraulic" translation="0.000254364 0.514543 -0.430145" rotation="113.365 -0.0678901 180" collision="false" nodeId="40">
+            <TransformGroup name="reelRotHydraulicPunch" translation="-1.74309e-14 2.54019e-14 0.540973" collision="false" nodeId="41"/>
+          </TransformGroup>
+          <TransformGroup name="mainDrum" translation="0 0.385989 -0.717642" collision="false" nodeId="42">
+            <Shape name="screws_decal1" translation="0 -0.385989 0.717642" shapeId="13" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="43"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="workAreas" nodeId="44">
+          <TransformGroup name="workAreaStart" translation="2.67352 0 0" nodeId="45"/>
+          <TransformGroup name="workAreaWidth" translation="-2.674 0 0" nodeId="46"/>
+          <TransformGroup name="workAreaHeight" translation="2.67352 0 -0.42755" nodeId="47"/>
+          <TransformGroup name="heightNode" nodeId="48"/>
+        </TransformGroup>
+        <TransformGroup name="testAreas" translation="0 0 -0.308461" nodeId="49">
+          <TransformGroup name="testArea1" translation="2.6 3.55264e-16 1.13687e-15" rotation="0.000368435 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="50">
+            <TransformGroup name="testAreaStart1" translation="-0.213504 2.1316e-16 1.332" collision="false" clipDistance="300" nodeId="51"/>
+            <TransformGroup name="testAreaWidth1" translation="-1.6 -4.26329e-16 1.332" collision="false" clipDistance="300" nodeId="52"/>
+            <TransformGroup name="testAreaHeight1" translation="-0.213504 -2.13163e-16 0.62271" collision="false" clipDistance="300" nodeId="53"/>
+          </TransformGroup>
+          <TransformGroup name="testArea2" translation="1 -2.1317e-16 1.13687e-15" rotation="0.000368435 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="54">
+            <TransformGroup name="testAreaStart2" translation="-3.0501e-16 7.10532e-17 1.332" collision="false" clipDistance="300" nodeId="55"/>
+            <TransformGroup name="testAreaWidth2" translation="-1 4.97379e-16 1.332" collision="false" clipDistance="300" nodeId="56"/>
+            <TransformGroup name="testAreaHeight2" translation="-3.0501e-16 -7.10526e-17 0.62271" collision="false" clipDistance="300" nodeId="57"/>
+          </TransformGroup>
+          <TransformGroup name="testArea3" translation="-5.47641e-16 -2.1317e-16 1.13687e-15" rotation="0.000368435 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="58">
+            <TransformGroup name="testAreaStart3" translation="-3.02923e-30 4.97379e-16 1.332" collision="false" clipDistance="300" nodeId="59"/>
+            <TransformGroup name="testAreaWidth3" translation="-1.27235 4.97376e-16 1.332" collision="false" clipDistance="300" nodeId="60"/>
+            <TransformGroup name="testAreaHeight3" translation="-6.05845e-30 -7.10526e-17 0.62271" collision="false" clipDistance="300" nodeId="61"/>
+          </TransformGroup>
+          <TransformGroup name="testArea4" translation="-1.28266 -2.1317e-16 1.10134e-15" rotation="0.000368435 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="62">
+            <TransformGroup name="testAreaStart4" translation="1.21315e-16 4.97379e-16 1.332" collision="false" clipDistance="300" nodeId="63"/>
+            <TransformGroup name="testAreaWidth4" translation="-1.31354 2.84209e-16 1.332" collision="false" clipDistance="300" nodeId="64"/>
+            <TransformGroup name="testAreaHeight4" translation="1.21315e-16 7.10559e-17 0.62271" collision="false" clipDistance="300" nodeId="65"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="effectNodes" translation="0 7.10543e-17 -0.573661" nodeId="66">
+          <TransformGroup name="cutterEffectLinkNode" translation="0 0.0808072 0.318484" nodeId="67">
+          </TransformGroup>
+          <Shape name="smokeEmitter" translation="0 0.0634445 0.586583" shapeId="14" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="68"/>
+        </TransformGroup>
+        <TransformGroup name="ai" nodeId="69">
+          <TransformGroup name="aiMarkerLeft" translation="2.67352 0 0.251407" nodeId="70"/>
+          <TransformGroup name="aiMarkerRight" translation="-2.674 0 0.251407" nodeId="71"/>
+          <TransformGroup name="aiMarkerBack" translation="0 0 -1.274" nodeId="72"/>
+          <TransformGroup name="sizeMarkerLeft" translation="2.67352 0 1.15296" nodeId="73"/>
+          <TransformGroup name="sizeMarkerRight" translation="-2.674 0 1.15296" nodeId="74"/>
+          <TransformGroup name="sizeMarkerBack" translation="0 0 -1.274" nodeId="75"/>
+          <TransformGroup name="aiCollisionNode" translation="0 0.426667 0" nodeId="76"/>
+        </TransformGroup>
+        <TransformGroup name="extensions" nodeId="77">
+          <TransformGroup name="canolaExtension" nodeId="78">
+            <Shape name="zieglerRapeseedModules_5_1M_vis" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="8" skinBindNodeIds="79 85 87 90 92 94 97" clipDistance="300" nodeId="79"/>
+            <Shape name="zieglerRapeseedModules_5_1M_decal" shapeId="16" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="9" clipDistance="50" nodeId="80"/>
+            <Shape name="screwDecals" shapeId="17" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="10" clipDistance="50" nodeId="81"/>
+            <Shape name="canolaExtension_lowSpikes" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="11" clipDistance="30" nodeId="82"/>
+            <Shape name="canolaExtension_lowKnifes" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="11" clipDistance="30" nodeId="83"/>
+            <TransformGroup name="canolaExtension_sideKnifesLeft" translation="2.60642 0.682244 0.980608" rotation="2.308 -0.0265347 -2.559" scale="1 1 1" nodeId="84">
+              <TransformGroup name="canolaExtension_sideKnifesLeft01" translation="-5.68434e-16 2.84217e-16 -2.84217e-16" scale="1 1 1" collision="false" clipDistance="300" nodeId="85">
+                <Shape name="canolaExtension_sideKnifes01Blade" translation="-3.85107 -0.195218 -0.00513552" rotation="0 -8.10524e-05 -9.13167e-16" scale="1 1 1" shapeId="20" castsShadows="true" receiveShadows="true" materialIds="11" clipDistance="30" nodeId="86"/>
+              </TransformGroup>
+              <TransformGroup name="canolaExtension_sideKnifesLeft02" translation="-5.68434e-16 2.84217e-16 -2.84217e-16" scale="1 1 1" collision="false" clipDistance="300" nodeId="87">
+                <Shape name="canolaExtension_sideKnifes02Blade" translation="-3.84998 -0.212358 -0.189527" scale="1 1 1" shapeId="21" castsShadows="true" receiveShadows="true" materialIds="11" clipDistance="30" nodeId="88"/>
+              </TransformGroup>
+              <Shape name="decals" translation="1.91593e-15 -2.98317e-16 -5.48928e-16" scale="1 1 1" shapeId="22" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="9" clipDistance="50" nodeId="89"/>
+              <TransformGroup name="cutter_vis" translation="1.42109e-15 1.42109e-16 -1.13687e-15" scale="1 1 1" collision="false" clipDistance="300" nodeId="90"/>
+            </TransformGroup>
+            <TransformGroup name="canolaExtension_sideKnifesRight" translation="-2.59583 0.68271 0.980603" rotation="2.30775 -0.0265347 2.55864" scale="1 1 1" nodeId="91">
+              <TransformGroup name="canolaExtension_sideKnifesRight01" translation="1.13687e-15 2.84217e-16 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="92">
+                <Shape name="canolaExtension_sideKnifes01Blade" translation="3.83016 -0.204549 -0.0077107" rotation="-0.0223467 0.46897 -5.46039" scale="1 1 1" shapeId="23" castsShadows="true" receiveShadows="true" materialIds="11" clipDistance="30" nodeId="93"/>
+              </TransformGroup>
+              <TransformGroup name="canolaExtension_sideKnifesRight02" translation="1.13687e-15 8.52651e-16 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="94">
+                <Shape name="canolaExtension_sideKnifes02Blade" translation="3.8281 -0.221641 -0.192098" scale="1 1 1" shapeId="24" castsShadows="true" receiveShadows="true" materialIds="11" clipDistance="30" nodeId="95"/>
+              </TransformGroup>
+              <Shape name="decals" translation="4.4288e-16 -6.03975e-16 -2.85495e-16" scale="1 1 1" shapeId="25" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="9" clipDistance="50" nodeId="96"/>
+              <TransformGroup name="cutter_vis" translation="4.48291e-16 -4.83612e-16 -1.17078e-16" scale="1 1 1" collision="false" clipDistance="300" nodeId="97"/>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape name="grainExtension" shapeId="26" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="98"/>
+        </TransformGroup>
+        <TransformGroup name="visuals" nodeId="99">
+          <Shape name="sticker_decals" shapeId="27" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="6" clipDistance="30" nodeId="100"/>
+          <Shape name="screws_decal" shapeId="28" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="30" nodeId="101"/>
+          <Shape name="smallStar_decal" shapeId="29" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="12" clipDistance="30" nodeId="102"/>
+          <Shape name="decals" shapeId="30" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="7" clipDistance="30" nodeId="103"/>
+          <Shape name="knives_decal" shapeId="31" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="13" clipDistance="30" nodeId="104"/>
+        </TransformGroup>
+        <TransformGroup name="rootJoint" nodeId="105"/>
+      </Shape>
+      <TransformGroup name="skinnedMesh" nodeId="106">
+        <Shape name="hoses" shapeId="32" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="105 39 33" clipDistance="300" nodeId="107"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

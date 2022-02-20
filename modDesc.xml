@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="63">
+    <author>Falkkor</author>
+    <version>1.1.0.0</version>
+    <title>
+        <en>Xtreme Claas Pack</en>
+    </title>
+    <description>
+        <en><![CDATA[This mod pack for Farming Simulator 22 features your favorite Claas machinery but now enhanced with eXtra power, eXtreme speed and eXciting performance! 
+
+        All store items in this mod feature: 
+            - Double the lifespan for durability (titanium components)
+            - Adjusted pricing for realism (turbos ain't cheap)
+            - Highest quality 3D models for configuration (see credits)
+            - Realistic Power/Torque Curves, Gear Ratios and Speeds (see credits)
+        
+        Arion 660X: 
+            - 300 HP / 220 KW
+            - 832 LB-FT / 1129 NM
+            - 46 MPH / 75 KPH
+            - $175,000 USD
+
+        Axion 870X: 
+            - 600 HP / 440 KW 
+            - 1664 LB-FT / 2258 NM 
+            - 46 MPH / 75 KPH 
+            - $275,000 USD 
+
+        Axion 960X: 
+            - 900 HP / 660 KW 
+            - 2496 LB-FT / 3387 NM 
+            - 46 MPH / 75 KPH 
+            - $375,000 USD 
+        
+        Axion 960TTX: 
+            - 900 HP / 660 KW 
+            - 2496 LB-FT / 3387 NM 
+            - 46 MPH / 75 KPH 
+            - $425,000 USD
+
+        Scorpion 1033X: 
+            - 200 HP / 147 KW 
+            - 631 LB-FT / 856 NM 
+            - 31 MPH / 50 KPH 
+            - $125,000 USD 
+
+        Jaguar 960TTX: 
+            - 900 HP / 660 KW 
+            - 2496 LB-FT / 3387 NM 
+            - 31 MPH / 50 KPH
+            - 25,000 Liter Capacity
+            - Doubled Unload Speed  
+            - $475,000 USD
+
+        DirectDisc 500X: 
+            - 15 MPH / 25 KPH
+            - $75,000 USD
+
+        Orbis 750X: 
+            - 15 MPH / 25 KPH
+            - $150,000 USD
+
+        Orbis 950X: 
+            - 15 MPH / 25 KPH
+            - $200,000 USD
+
+        PickUp 300X: 
+            - 15 MPH / 25 KPH
+            - $50,000 USD
+
+        Lexion 8900X: 
+            - 900 HP / 660 KW 
+            - 2496 LB-FT / 3387 NM 
+            - 31 MPH / 50 KPH
+            - 25,000 Liter Capacity
+            - Doubled Unload Speed  
+            - $525,000 USD
+
+        ConvioFlex 1380X: 
+            - 15 MPH / 25 KPH 
+            - $100,000 USD
+
+        CorioFlex 1275CX: 
+            - 15 MPH / 25 KPH 
+            - $100,0000 USD
+        
+        Diamant 12X: 
+            - 16 MPH / 25 KPH
+            - $125,000 USD
+
+        Helianthus 12000X: 
+            - 16 MPH / 25 KPH
+            - $125,000 USD
+
+        Dominator 108SLX: 
+            - 300 HP / 220 KW
+            - 832 LB-FT / 1129 NM
+            - 31 MPH / 50 KPH
+            - 12,500 Liter Capacity
+            - Doubled Unload Speed  
+            - $125,000 USD 
+
+        C510X: 
+            - 15 MPH / 25 KPH
+            - $10,000 USD
+
+        Quadrant 5300X: 
+            - 15 MPH / 25 KPH 
+            - $175,000 USD
+
+        Rollant 455X Uniwrap: 
+            - 15 MPH / 25 KPH 
+            - $100,000 USD
+
+        Cargos 9500X: 
+            - 75,000 Liter Capacity 
+            - $150,000 USD
+
+        Carat 140TDX: 
+            - 12,500 Liter Capacity Base
+            - 25,000 Liter Capacity with Extension
+            - $25,000 USD Base or $50,000 USD with Extension
+
+        Coming Soon: 
+            - More Harvesters, Headers and Loaders
+            - Foraging Harvesters and Foraging Headers
+            - Mowing and Baling Equipment
+
+        Credits: 
+            - GIANTS Software - https://farming-simulator.com/ 
+            - Schnibbl Modding's Claas Tractors Package on https://farming-simulator.com/mods
+            - Jens Ejvinsson and Stegei @ GIANTS Software for Power Interpolation Formulae
+            
+        Contact:
+            - info@falkkor.io 
+            - https://falkkor.io]]></en>
+    </description>
+    <iconFilename>store_xtremeclaaspack.png</iconFilename>
+    <multiplayer supported="true" />
+    <storeItems>
+        <storeItem xmlFilename="arion660X/arion660X.xml"/>
+		<storeItem xmlFilename="axion870X/axion870X.xml"/>
+		<storeItem xmlFilename="axion960X/axion960X.xml"/>
+		<storeItem xmlFilename="axion960TTX/axion960TTX.xml"/>
+        <storeItem xmlFilename="scorpion1033X/scorpion1033X.xml"/>
+        <storeItem xmlFilename="jaguar960TTX/jaguar960TTX.xml"/>
+        <storeItem xmlFilename="orbis750X/orbis750X.xml"/>
+        <storeItem xmlFilename="orbis900X/orbis900X.xml"/>
+        <storeItem xmlFilename="directDisc500X/directDisc500X.xml"/>
+        <storeItem xmlFilename="directDisc500XTrailer/directDisc500XTrailer.xml"/>
+        <storeItem xmlFilename="pickUp300X/pickUp300X.xml"/>
+        <storeItem xmlFilename="quadrant5300X/quadrant5300X.xml"/>
+        <storeItem xmlFilename="rollant455XUniwrap/rollant455XUniwrap.xml"/>
+        <storeItem xmlFilename="lexion8900X/lexion8900X.xml"/>
+        <storeItem xmlFilename="convioFlex1380X/convioFlex1380X.xml"/>
+        <storeItem xmlFilename="corio1275CX/corio1275CX.xml"/>
+        <storeItem xmlFilename="diamant12X/diamant12X.xml"/>
+        <storeItem xmlFilename="helianthus12000X/helianthus12000X.xml"/>
+        <storeItem xmlFilename="dominator108SLX/dominator108SLX.xml" />
+        <storeItem xmlFilename="c510X/c510X.xml" />
+        <storeItem xmlFilename="c510XTrailer/c510XTrailer.xml" />
+        <storeItem xmlFilename="cargos9500X/cargos9500X.xml"/>
+        <storeItem xmlFilename="carat140TDX/carat140TDX.xml"/>
+		<storeItem xmlFilename="frontLoader/frontLoader140.xml"/>
+		<storeItem xmlFilename="q8M/q8M.xml"/>
+    </storeItems>
+    <l10n>
+        <text name="configuration_beaconLight"> <en>Beacon Lights</en> <de>Rundumleuchten</de> </text>
+        <text name="configuration_valueNone1"> <en>None</en> <de>Keine</de> </text>
+        <text name="configuration_valueLeft"> <en>Left</en> <de>Links</de> </text>
+        <text name="configuration_valueRight"> <en>Right</en> <de>Rechts</de> </text>
+        <text name="configuration_valueLeRi"> <en>Left + Right</en> <de>Links + Rechts</de> </text>
+        <text name="configuration_warnSign"> <en>Warning Signs</en> <de>Warntafeln</de> </text>
+
+        <text name="configuration_fender"> <en>Fender</en> <de>Kotflügel</de> </text>
+        <text name="configuration_fenderDefault"> <en>Small</en> <de>Schmal</de> </text>
+        <text name="configuration_fenderWide"> <en>wide</en> <de>Breit</de> </text>
+
+        <text name="colorClaasGreen"> <en>Claas Green</en> <de>Claas Grün</de> </text>
+        <text name="colorGreen"> <en>Green</en> <de>Grün</de> </text>
+        <text name="colorNature"> <en>Nature Green</en> <de>Nature Grün</de> </text>
+        <text name="colorBlack"> <en>Black</en> <de>Schwarz</de> </text>
+        <text name="colorWein"> <en>Winered</en> <de>Weinrot</de> </text>
+        <text name="colorTannen"> <en>Firgreen</en> <de>Tannengrün</de> </text>
+        <text name="colorGrey"> <en>Gray</en> <de>Grau</de> </text>
+        <text name="colorGreyGlossy"> <en>Glossy gray</en> <de>Grau glänzend</de> </text>
+        <text name="colorBeige"> <en>Beige</en> <de>Beige</de> </text>
+        <text name="colorcommunal"> <en>Communal</en> <de>Kommunal</de> </text>
+        <text name="colorWhite"> <en>White</en> <de>Weiß</de> </text>
+    </l10n>
+</modDesc>
