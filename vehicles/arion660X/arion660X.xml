@@ -33,7 +33,7 @@
 
     <base>
         <typeDesc>$l10n_typeDesc_tractor</typeDesc>
-        <filename>arion660X/arion600.i3d</filename>
+        <filename>vehicles/arion660X/arion600.i3d</filename>
         <sounds filename="$data/vehicles/claas/arion600/sounds/arion600.xml"/>
         <size width="3.8" length="5.5" height="3.3"/>
         <components>

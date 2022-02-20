@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="63">
     <author>Falkkor</author>
-    <version>1.1.0.0</version>
+    <version>1.2.0.0</version>
     <title>
         <en>Xtreme Claas Pack</en>
     </title>
@@ -135,34 +135,34 @@
             - info@falkkor.io 
             - https://falkkor.io]]></en>
     </description>
-    <iconFilename>store_xtremeclaaspack.png</iconFilename>
+    <iconFilename>icon.dds</iconFilename>
     <multiplayer supported="true" />
     <storeItems>
-        <storeItem xmlFilename="arion660X/arion660X.xml"/>
-		<storeItem xmlFilename="axion870X/axion870X.xml"/>
-		<storeItem xmlFilename="axion960X/axion960X.xml"/>
-		<storeItem xmlFilename="axion960TTX/axion960TTX.xml"/>
-        <storeItem xmlFilename="scorpion1033X/scorpion1033X.xml"/>
-        <storeItem xmlFilename="jaguar960TTX/jaguar960TTX.xml"/>
-        <storeItem xmlFilename="orbis750X/orbis750X.xml"/>
-        <storeItem xmlFilename="orbis900X/orbis900X.xml"/>
-        <storeItem xmlFilename="directDisc500X/directDisc500X.xml"/>
-        <storeItem xmlFilename="directDisc500XTrailer/directDisc500XTrailer.xml"/>
-        <storeItem xmlFilename="pickUp300X/pickUp300X.xml"/>
-        <storeItem xmlFilename="quadrant5300X/quadrant5300X.xml"/>
-        <storeItem xmlFilename="rollant455XUniwrap/rollant455XUniwrap.xml"/>
-        <storeItem xmlFilename="lexion8900X/lexion8900X.xml"/>
-        <storeItem xmlFilename="convioFlex1380X/convioFlex1380X.xml"/>
-        <storeItem xmlFilename="corio1275CX/corio1275CX.xml"/>
-        <storeItem xmlFilename="diamant12X/diamant12X.xml"/>
-        <storeItem xmlFilename="helianthus12000X/helianthus12000X.xml"/>
-        <storeItem xmlFilename="dominator108SLX/dominator108SLX.xml" />
-        <storeItem xmlFilename="c510X/c510X.xml" />
-        <storeItem xmlFilename="c510XTrailer/c510XTrailer.xml" />
-        <storeItem xmlFilename="cargos9500X/cargos9500X.xml"/>
-        <storeItem xmlFilename="carat140TDX/carat140TDX.xml"/>
-		<storeItem xmlFilename="frontLoader/frontLoader140.xml"/>
-		<storeItem xmlFilename="q8M/q8M.xml"/>
+        <storeItem xmlFilename="vehicles/arion660X/arion660X.xml"/>
+		<storeItem xmlFilename="vehicles/axion870X/axion870X.xml"/>
+		<storeItem xmlFilename="vehicles/axion960X/axion960X.xml"/>
+		<storeItem xmlFilename="vehicles/axion960TTX/axion960TTX.xml"/>
+        <storeItem xmlFilename="vehicles/scorpion1033X/scorpion1033X.xml"/>
+        <storeItem xmlFilename="vehicles/jaguar960TTX/jaguar960TTX.xml"/>
+        <storeItem xmlFilename="vehicles/orbis750X/orbis750X.xml"/>
+        <storeItem xmlFilename="vehicles/orbis900X/orbis900X.xml"/>
+        <storeItem xmlFilename="vehicles/directDisc500X/directDisc500X.xml"/>
+        <storeItem xmlFilename="vehicles/directDisc500XTrailer/directDisc500XTrailer.xml"/>
+        <storeItem xmlFilename="vehicles/pickUp300X/pickUp300X.xml"/>
+        <storeItem xmlFilename="vehicles/quadrant5300X/quadrant5300X.xml"/>
+        <storeItem xmlFilename="vehicles/rollant455XUniwrap/rollant455XUniwrap.xml"/>
+        <storeItem xmlFilename="vehicles/lexion8900X/lexion8900X.xml"/>
+        <storeItem xmlFilename="vehicles/convioFlex1380X/convioFlex1380X.xml"/>
+        <storeItem xmlFilename="vehicles/corio1275CX/corio1275CX.xml"/>
+        <storeItem xmlFilename="vehicles/diamant12X/diamant12X.xml"/>
+        <storeItem xmlFilename="vehicles/helianthus12000X/helianthus12000X.xml"/>
+        <storeItem xmlFilename="vehicles/dominator108SLX/dominator108SLX.xml" />
+        <storeItem xmlFilename="vehicles/c510X/c510X.xml" />
+        <storeItem xmlFilename="vehicles/c510XTrailer/c510XTrailer.xml" />
+        <storeItem xmlFilename="vehicles/cargos9500X/cargos9500X.xml"/>
+        <storeItem xmlFilename="vehicles/carat140TDX/carat140TDX.xml"/>
+		<storeItem xmlFilename="vehicles/frontLoader/frontLoader140.xml"/>
+		<storeItem xmlFilename="vehicles/q8M/q8M.xml"/>
     </storeItems>
     <l10n>
         <text name="configuration_beaconLight"> <en>Beacon Lights</en> <de>Rundumleuchten</de> </text>

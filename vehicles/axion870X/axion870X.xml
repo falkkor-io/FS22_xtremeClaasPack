@@ -32,7 +32,7 @@
 
     <base>
         <typeDesc>$l10n_typeDesc_tractor</typeDesc>
-        <filename>axion870X/axion800.i3d</filename>
+        <filename>vehicles/axion870X/axion800.i3d</filename>
         <sounds filename="$data/vehicles/claas/axion800/sounds/axion800.xml"/>
         <size width="4.2" length="6.5"/>
         <components>

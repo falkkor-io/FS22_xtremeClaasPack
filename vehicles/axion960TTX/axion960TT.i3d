@@ -62,8 +62,8 @@
     <File fileId="48" filename="$data/vehicles/claas/trion750/trion750Interior_vmask.png"/>
     <File fileId="56" filename="$data/vehicles/quicke/frames/fendtVario700/fendtVario700_normal.png"/>
     <File fileId="57" filename="$data/vehicles/quicke/frames/fendtVario700/fendtVario700_vmask.png"/>
-    <File fileId="58" filename="../tex/axion900EngineConfigurationsDecal_diffuse.png"/>
-    <File fileId="43" filename="../tex/trion750InteriorDecals_diffuse.dds"/>
+    <File fileId="58" filename="../../tex/axion900EngineConfigurationsDecal_diffuse.png"/>
+    <File fileId="43" filename="../../tex/trion750InteriorDecals_diffuse.dds"/>
   </Files>
 
 

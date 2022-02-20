@@ -29,7 +29,7 @@
 
     <base>
         <typeDesc>$l10n_typeDesc_tractor</typeDesc>
-        <filename>axion960TTX/axion960TT.i3d</filename>
+        <filename>vehicles/axion960TTX/axion960TT.i3d</filename>
         <sounds filename="$data/vehicles/claas/axion960TT/sounds/axion960TT.xml"/>
         <size width="3.5" length="6.5"/>
         <components>

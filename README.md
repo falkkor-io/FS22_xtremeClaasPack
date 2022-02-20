@@ -115,6 +115,8 @@ Carat 140TDX:
     - $25,000 USD Base or $50,000 USD with Extension
 
 Changelog:
+    - v1.2.0.0
+        - Folder Organization
     - v1.1.0.0
         - GitHub Release
 ```

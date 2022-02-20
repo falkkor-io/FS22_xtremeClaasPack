@@ -14,7 +14,7 @@
             <function>$l10n_function_combine</function>
             <function>$l10n_function_combineNeedsCutter</function>
         </functions>
-        <image>dominator108SLX/store_dominator108SL.png</image>
+        <image>vehicles/dominator108SLX/store_dominator108SL.png</image>
         <price>125000</price>
         <lifetime>1200</lifetime>
         <rotation>0</rotation>
@@ -34,8 +34,8 @@
 
     <base>
         <typeDesc>$l10n_typeDesc_combine</typeDesc>
-        <filename>dominator108SLX/dominator108SL.i3d</filename>
-        <sounds filename="dominator108SLX/sounds/dominator108SL.xml"/>
+        <filename>vehicles/dominator108SLX/dominator108SL.i3d</filename>
+        <sounds filename="vehicles/dominator108SLX/sounds/dominator108SL.xml"/>
         <size width="4.7" length="9" height="4.2" lengthOffset="-0.3" />
         <components>
             <component centerOfMass="0 1.4 0.4" solverIterationCount="50" mass="4500" />

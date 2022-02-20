@@ -30,7 +30,7 @@
 
     <base>
         <typeDesc>$l10n_typeDesc_frontloader</typeDesc>
-        <filename>q8M/q8M.i3d</filename>
+        <filename>vehicles/q8M/q8M.i3d</filename>
         <size width="2.5" length="3.5" lengthOffset="1.4"/>
         <components>
             <component centerOfMass="0 0.2 2.2" solverIterationCount="10" mass="760" />

@@ -67,9 +67,9 @@
     <File fileId="62" filename="$data/vehicles/claas/frontLoader140/frontLoader_vmask.png"/>
     <File fileId="52" filename="$data/vehicles/claas/trion750/trion750Interior_normal.png"/>
     <File fileId="53" filename="$data/vehicles/claas/trion750/trion750Interior_vmask.png"/>
-    <File fileId="64" filename="../tex/arion600EngineConfigurationsDecal_diffuse.png"/>
-    <File fileId="67" filename="../tex/arionDecal_diffuse.dds"/>
-    <File fileId="45" filename="../tex/trion750InteriorDecals_diffuse.png"/>
+    <File fileId="64" filename="../../tex/arion600EngineConfigurationsDecal_diffuse.png"/>
+    <File fileId="67" filename="../../tex/arionDecal_diffuse.dds"/>
+    <File fileId="45" filename="../../tex/trion750InteriorDecals_diffuse.png"/>
   </Files>
 
 

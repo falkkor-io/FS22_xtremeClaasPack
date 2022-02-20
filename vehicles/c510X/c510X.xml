@@ -6,13 +6,13 @@
         <name>C510X</name>
         <specs>
             <workingWidth>5.10</workingWidth>
-            <combination xmlFilename="dominator108SL/dominator108SL.xml" />
-            <combination xmlFilename="c510XTrailer/c510XTrailer.xml" />
+            <combination xmlFilename="vehicles/dominator108SL/dominator108SL.xml" />
+            <combination xmlFilename="vehicles/c510XTrailer/c510XTrailer.xml" />
         </specs>
         <functions>
             <function>$l10n_function_cutter</function>
         </functions>
-        <image>c510X/store_c510.png</image>
+        <image>vehicles/c510X/store_c510.png</image>
         <price>10000</price>
         <lifetime>1200</lifetime>
         <rotation>0</rotation>
@@ -33,7 +33,7 @@
 
     <base>
         <typeDesc>$l10n_typeDesc_cutter</typeDesc>
-        <filename>c510X/c510.i3d</filename>
+        <filename>vehicles/c510X/c510.i3d</filename>
         <size width="7" length="3.5" widthOffset="-0.25" />
         <speedLimit value="25" />
         <components>
