@@ -1,4 +1,7 @@
-## This mod pack for Farming Simulator 22 features your favorite CLAAS machinery but now enhanced with eXtra power, eXtreme speed and eXciting performance! 
+# Xtreme CLAAS Pack
+### This mod pack for Farming Simulator 22 features your favorite CLAAS machinery but now enhanced with eXtra power, eXtreme speed and eXciting performance! 
+
+#### Latest version can be downloaded here: [v1.2.0.0](https://falkkor.io/FS22_xtremeClaasPack.zip)
 
 ![Xtreme CLAAS Pack Screenshot](/screenshots/xtreme_claas_screen1.jpg)
 
