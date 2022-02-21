@@ -118,7 +118,9 @@ Carat 140TDX:
     - 12,500 Liter Capacity Base
     - 25,000 Liter Capacity with Extension
     - $25,000 USD Base or $50,000 USD with Extension
+```
 
+```
 Changelog:
     - v1.2.0.0
         - Folder Organization
