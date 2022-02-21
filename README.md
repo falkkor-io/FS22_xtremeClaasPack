@@ -1,5 +1,7 @@
 ## This mod pack for Farming Simulator 22 features your favorite CLAAS machinery but now enhanced with eXtra power, eXtreme speed and eXciting performance! 
 
+![Xtreme CLAAS Pack Screenshot](/screenshots/xtreme_claas_screen1.jpg)
+
 ```
 All store items in this mod feature: 
     - Double the Lifespan for Durability with Titanium Components
