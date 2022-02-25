@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="63">
     <author>Falkkor</author>
-    <version>1.2.0.0</version>
+    <version>1.3.0.0</version>
     <title>
         <en>Xtreme Claas Pack</en>
     </title>
@@ -120,20 +120,14 @@
             - 12,500 Liter Capacity Base
             - 25,000 Liter Capacity with Extension
             - $25,000 USD Base or $50,000 USD with Extension
-
-        Coming Soon: 
-            - More Harvesters, Headers and Loaders
-            - Foraging Harvesters and Foraging Headers
-            - Mowing and Baling Equipment
-
-        Credits: 
-            - GIANTS Software - https://farming-simulator.com/ 
-            - Schnibbl Modding's Claas Tractors Package on https://farming-simulator.com/mods
-            - Jens Ejvinsson and Stegei @ GIANTS Software for Power Interpolation Formulae
             
-        Contact:
-            - info@falkkor.io 
-            - https://falkkor.io]]></en>
+        Changelog:
+            -v1.3.0.0
+                - Lexion 8900X Update for Patch 1.3
+            - v1.2.0.0
+                - Folder Organization
+            - v1.1.0.0
+                - GitHub Release]]></en>
     </description>
     <iconFilename>icon.dds</iconFilename>
     <multiplayer supported="true" />
