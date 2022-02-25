@@ -58,11 +58,11 @@
             <configuration name="fillUnit" index="1"/>
             <configuration name="fillVolume" index="1"/>
         </configurationSet>
-        <configurationSet name="$l10n_configuration_valueSmall">
+        <!-- <configurationSet name="$l10n_configuration_valueSmall">
             <configuration name="folding" index="2"/>
             <configuration name="fillUnit" index="2"/>
             <configuration name="fillVolume" index="2"/>
-        </configurationSet>
+        </configurationSet> -->
     </configurationSets>
 
     <powerConsumer ptoRpm="350" neededMaxPtoPower="10"/>
