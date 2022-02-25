@@ -1,7 +1,7 @@
 # Xtreme CLAAS Pack
 ### This mod pack for Farming Simulator 22 features your favorite CLAAS machinery but now enhanced with eXtra power, eXtreme speed and eXciting performance! 
 
-#### Latest version can be downloaded here: [v1.2.0.0](https://falkkor.io/FS22_xtremeClaasPack.zip)
+#### Latest version can be downloaded here: [v1.3.0.0](https://falkkor.io/FS22_xtremeClaasPack.zip)
 
 ![Xtreme CLAAS Pack Screenshot](/screenshots/xtreme_claas_screen1.jpg)
 
@@ -122,6 +122,8 @@ Carat 140TDX:
 
 ```
 Changelog:
+    -v1.3.0.0
+        - Lexion 8900X Update for Patch 1.3
     - v1.2.0.0
         - Folder Organization
     - v1.1.0.0
