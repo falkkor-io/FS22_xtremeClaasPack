@@ -124,6 +124,7 @@ Carat 140TDX:
 Changelog:
     -v1.3.0.0
         - Lexion 8900X Update for Patch 1.3
+        - Updated Combinations for Harvesters
     - v1.2.0.0
         - Folder Organization
     - v1.1.0.0

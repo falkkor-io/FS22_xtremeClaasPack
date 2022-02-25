@@ -7,8 +7,8 @@
         <specs>
             <power>300</power>
             <maxSpeed>50</maxSpeed>
-            <combination xmlFilename="c510X/c510X.xml" />
-            <combination xmlFilename="c510XTrailer/c510XTrailer.xml" />
+            <combination xmlFilename="vehicles/c510X/c510X.xml" />
+            <combination xmlFilename="vehicles/c510XTrailer/c510XTrailer.xml" />
         </specs>
         <functions>
             <function>$l10n_function_combine</function>
