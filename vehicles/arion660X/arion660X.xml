@@ -5,8 +5,8 @@
     <storeData>
         <name>ARION 660X</name>
         <specs>
-            <power>300</power>
-            <maxSpeed>75</maxSpeed>
+            <power>660</power>
+            <maxSpeed>100</maxSpeed>
         </specs>
         <functions>
             <function>$l10n_function_tractor</function>
@@ -1169,8 +1169,8 @@
         </differentialConfigurations>
 
         <motorConfigurations>
-            <motorConfiguration name="ARION 660X" hp="300" price="0">
-                <motor torqueScale="1.266" minRpm="850" maxRpm="2200" maxForwardSpeed="75" maxBackwardSpeed="22" accelerationLimit="4" brakeForce="6" lowBrakeForceScale="0.2" dampingRateScale="0.85">
+            <motorConfiguration name="ARION 660X" hp="660" price="0">
+                <motor torqueScale="2.784" minRpm="850" maxRpm="2200" maxForwardSpeed="100" maxBackwardSpeed="22" accelerationLimit="8" brakeForce="18" lowBrakeForceScale="0.2" dampingRateScale="0.85">
                     <torque normRpm="0.45" torque="0.9"/>
                     <torque normRpm="0.5" torque="0.97"/>
                     <torque normRpm="0.59" torque="1"/>
@@ -1178,7 +1178,7 @@
                     <torque normRpm="0.86" torque="0.88"/>
                     <torque normRpm="1" torque="0.72"/>
                 </motor>
-                <transmission minForwardGearRatio="9.03" maxForwardGearRatio="300" minBackwardGearRatio="32" maxBackwardGearRatio="300" name="$l10n_info_transmission_cvt"/>
+                <transmission minForwardGearRatio="6.77" maxForwardGearRatio="300" minBackwardGearRatio="32" maxBackwardGearRatio="300" name="$l10n_info_transmission_cvt"/>
                 <objectChange node="motorConfiguration_decal" shaderParameter="offsetUV" shaderParameterActive="0 -0.375 0 0" interpolation="true" interpolationTime="0.01"/>
             </motorConfiguration>
         </motorConfigurations>
