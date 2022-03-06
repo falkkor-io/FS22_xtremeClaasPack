@@ -461,7 +461,7 @@
         <fillUnitConfigurations>
             <fillUnitConfiguration>
                 <fillUnits>
-                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="BULK" capacity="25000" allowAILoading="true">
+                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="BULK" capacity="75000" allowAILoading="true">
                         <exactFillRootNode node="exactFillRootNodeSmall" />
                         <autoAimTargetNode node="fillAutoAimTarget01" startZ="1.55" endZ="-2.45" invert="false" startPercentage="25"/>
                     </fillUnit>
@@ -477,7 +477,7 @@
             </fillUnitConfiguration>
             <fillUnitConfiguration price="25000">
                 <fillUnits>
-                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="BULK" capacity="50000" allowAILoading="true">
+                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="BULK" capacity="150000" allowAILoading="true">
                         <exactFillRootNode node="exactFillRootNodeBig" />
                         <autoAimTargetNode node="fillAutoAimTarget02" startZ="1.55" endZ="-2.5" invert="false" startPercentage="25"/>
                     </fillUnit>

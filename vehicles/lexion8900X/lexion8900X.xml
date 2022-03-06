@@ -6,7 +6,7 @@
         <name>LEXION 8900X</name>
         <specs>
             <power>900</power>
-            <maxSpeed>50</maxSpeed>
+            <maxSpeed>75</maxSpeed>
             <combination xmlFilename="$data/vehicles/claas/convioFlex1380/convioFlex1380.xml"/>
             <combination xmlFilename="$data/vehicles/claas/corio1275C/corio1275C.xml"/>
             <combination xmlFilename="$data/vehicles/capello/diamant12/diamant12.xml"/>
@@ -598,7 +598,7 @@
 
         <motorConfigurations>
             <motorConfiguration name="LEXION 8900X" hp="900">
-                <motor torqueScale="3.797" minRpm="1200" maxRpm="2200" minSpeed="0.01" maxForwardSpeed="50" maxBackwardSpeed="14.9" brakeForce="17" lowBrakeForceScale="0.22" accelerationLimit="4" rotInertia="0.002">
+                <motor torqueScale="3.797" minRpm="1200" maxRpm="2200" minSpeed="0.01" maxForwardSpeed="75" maxBackwardSpeed="14.9" brakeForce="24" lowBrakeForceScale="0.22" accelerationLimit="8" rotInertia="0.002">
                     <torque normRpm="0.45" torque="0.9"/>
                     <torque normRpm="0.5" torque="0.97"/>
                     <torque normRpm="0.59" torque="1"/>
@@ -606,7 +606,7 @@
                     <torque normRpm="0.86" torque="0.88"/>
                     <torque normRpm="1" torque="0.72"/>
                 </motor>
-                <transmission minForwardGearRatio="13.55" maxForwardGearRatio="380" minBackwardGearRatio="47.5" maxBackwardGearRatio="380" name="$l10n_info_transmission_cvt"/>
+                <transmission minForwardGearRatio="9.03" maxForwardGearRatio="380" minBackwardGearRatio="47.5" maxBackwardGearRatio="380" name="$l10n_info_transmission_cvt"/>
             </motorConfiguration>
         </motorConfigurations>
 
@@ -669,7 +669,7 @@
         <fillUnitConfigurations>
             <fillUnitConfiguration name="EU" vehicleIcon="$data/vehicles/claas/lexion8000/store_lexion8000.png">
                 <fillUnits>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine" capacity="25000" foldMinLimit="1" foldMaxLimit="1">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine" capacity="75000" foldMinLimit="1" foldMaxLimit="1">
                         <exactFillRootNode node="exactFillRootNode"/>
                         <alarmTriggers>
                             <alarmTrigger minFillLevel="1" maxFillLevel="1" turnOffInTrigger="true"/>
@@ -685,7 +685,7 @@
             </fillUnitConfiguration>
             <fillUnitConfiguration name="US" vehicleIcon="$data/vehicles/claas/lexion8000/store_lexion8000US.png">
                 <fillUnits>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine" capacity="25000" foldMinLimit="1" foldMaxLimit="1">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine" capacity="75000" foldMinLimit="1" foldMaxLimit="1">
                         <exactFillRootNode node="exactFillRootNode"/>
                         <alarmTriggers>
                             <alarmTrigger minFillLevel="1" maxFillLevel="1" turnOffInTrigger="true"/>
