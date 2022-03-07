@@ -327,7 +327,7 @@
         <fillUnitConfigurations>
             <fillUnitConfiguration>
                 <fillUnits>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine" capacity="75000" >
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypeCategories="combine" capacity="25000" >
                         <alarmTriggers>
                             <alarmTrigger minFillLevel="1" maxFillLevel="1" turnOffInTrigger="true"/>
                         </alarmTriggers>
