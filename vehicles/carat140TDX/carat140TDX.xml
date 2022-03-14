@@ -545,7 +545,7 @@
     </trailer>
 
     <dischargeable>
-        <dischargeNode node="dischargeNodeBack" emptySpeed="1610" fillUnitIndex="1" unloadInfoIndex="1" allowAIDischarge="true" >
+        <dischargeNode node="dischargeNodeBack" emptySpeed="8192" fillUnitIndex="1" unloadInfoIndex="1" allowAIDischarge="true" >
             <info width="2.4" length="0.5" zOffset="0.5"/>
             <effects>
                 <effectNode effectClass="TipEffect">
@@ -555,7 +555,7 @@
                 <effectNode effectNode="smokeEffectBack" materialType="unloadingSmoke" fadeTime="0.5" />
             </effects>
         </dischargeNode>
-        <dischargeNode node="dischargeNodeGrainDoor" emptySpeed="315" fillUnitIndex="1" unloadInfoIndex="2">
+        <dischargeNode node="dischargeNodeGrainDoor" emptySpeed="1024" fillUnitIndex="1" unloadInfoIndex="2">
             <info width="0.5" length="0.5" zOffset="0.5"/>
             <effects>
                 <effectNode effectClass="TipEffect">

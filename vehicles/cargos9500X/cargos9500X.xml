@@ -482,15 +482,15 @@
         <fillUnitConfigurations title="$l10n_configuration_silageAdditives">
             <fillUnitConfiguration name="$l10n_configuration_valueNo" price="0">
                 <fillUnits>
-                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="forageWagon" capacity="75000" allowAILoading="true">
+                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="forageWagon" capacity="250000" allowAILoading="true">
                         <exactFillRootNode node="exactFillRootNode" />
                         <autoAimTargetNode node="fillAutoAimTarget" startZ="2.161" endZ="-3.128" invert="false" startPercentage="25"/>
                     </fillUnit>
                 </fillUnits>
             </fillUnitConfiguration>
-            <fillUnitConfiguration name="$l10n_configuration_valueYes" price="2000">
+            <fillUnitConfiguration name="$l10n_configuration_valueYes" price="5000">
                 <fillUnits>
-                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="forageWagon" capacity="75000" allowAILoading="true">
+                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="forageWagon" capacity="250000" allowAILoading="true">
                         <exactFillRootNode node="exactFillRootNode" />
                         <autoAimTargetNode node="fillAutoAimTarget" startZ="2.161" endZ="-3.128" invert="false" startPercentage="25"/>
                     </fillUnit>
@@ -555,7 +555,7 @@
     </trailer>
 
     <dischargeable>
-        <dischargeNode node="dischargeNode" emptySpeed="2935" fillUnitIndex="1" unloadInfoIndex="1" allowAIDischarge="true">
+        <dischargeNode node="dischargeNode" emptySpeed="4096" fillUnitIndex="1" unloadInfoIndex="1" allowAIDischarge="true">
             <info width="1.5" length="0.5" />
             <effects>
                 <effectNode effectClass="TipEffect">
