@@ -490,7 +490,7 @@
             </fillUnitConfiguration>
             <fillUnitConfiguration name="$l10n_configuration_valueYes" price="5000">
                 <fillUnits>
-                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="forageWagon" capacity="250000" allowAILoading="true">
+                    <fillUnit shopDisplayUnit="CUBICMETER" fillTypeCategories="forageWagon" capacity="950000" allowAILoading="true">
                         <exactFillRootNode node="exactFillRootNode" />
                         <autoAimTargetNode node="fillAutoAimTarget" startZ="2.161" endZ="-3.128" invert="false" startPercentage="25"/>
                     </fillUnit>
