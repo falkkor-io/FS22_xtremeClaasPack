@@ -1170,7 +1170,7 @@
 
         <motorConfigurations>
             <motorConfiguration name="ARION 660X" hp="660" price="0">
-                <motor torqueScale="2.784" minRpm="850" maxRpm="2200" maxForwardSpeed="100" maxBackwardSpeed="22" accelerationLimit="8" brakeForce="18" lowBrakeForceScale="0.2" dampingRateScale="0.85">
+                <motor torqueScale="2.784" minRpm="850" maxRpm="2200" maxForwardSpeed="100" maxBackwardSpeed="22" accelerationLimit="16" brakeForce="48" lowBrakeForceScale="0.2" dampingRateScale="0.85">
                     <torque normRpm="0.45" torque="0.9"/>
                     <torque normRpm="0.5" torque="0.97"/>
                     <torque normRpm="0.59" torque="1"/>
