@@ -5,8 +5,8 @@
     <storeData>
         <name>AXION 960TTX</name>
         <specs>
-            <power>900</power>
-            <maxSpeed>75</maxSpeed>
+            <power>960</power>
+            <maxSpeed>100</maxSpeed>
         </specs>
         <functions>
             <function>$l10n_function_tractor</function>
@@ -485,8 +485,8 @@
         </differentialConfigurations>
 
         <motorConfigurations>
-            <motorConfiguration name="AXION 960TTX" hp="900" >
-                <motor torqueScale="3.797" minRpm="650" maxRpm="2200" maxForwardSpeed="75" maxBackwardSpeed="22" accelerationLimit="4" brakeForce="9" lowBrakeForceScale="0.22" dampingRateScale="2">
+            <motorConfiguration name="AXION 960TTX" hp="960" >
+                <motor torqueScale="4.050" minRpm="650" maxRpm="2200" maxForwardSpeed="100" maxBackwardSpeed="22" accelerationLimit="16" brakeForce="48" lowBrakeForceScale="0.22" dampingRateScale="2">
                     <torque normRpm="0.45" torque="0.9"/>
                     <torque normRpm="0.5" torque="0.97"/>
                     <torque normRpm="0.59" torque="1"/>
@@ -494,7 +494,7 @@
                     <torque normRpm="0.86" torque="0.88"/>
                     <torque normRpm="1" torque="0.72"/>
                 </motor>
-                <transmission minForwardGearRatio="9.03" maxForwardGearRatio="300" minBackwardGearRatio="32" maxBackwardGearRatio="300" name="$l10n_info_transmission_cvt"/>
+                <transmission minForwardGearRatio="6.77" maxForwardGearRatio="300" minBackwardGearRatio="32" maxBackwardGearRatio="300" name="$l10n_info_transmission_cvt"/>
                 <objectChange node="motorConfiguration_decal" shaderParameter="offsetUV" shaderParameterActive="0 -0.5 0 0" interpolation="false"/>
             </motorConfiguration>
         </motorConfigurations>
